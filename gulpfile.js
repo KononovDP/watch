@@ -36,7 +36,9 @@ gulp.task('sass', function() {
 // Таск для сбора сторонних .css файлов (плагины)
 gulp.task('lib-css', function() {
 	// указываем путь к необходимым файлам
-	return gulp.src([])
+	return gulp.src([
+		'resources/libs/slick-carousel/slick/slick.css'
+	])
 	// склеиваем их в один файл, с учетом из порядка на предыдущем шаге 
 	.pipe(concat('lib.min.css'))
 	// минифицируем стили
@@ -58,7 +60,8 @@ gulp.task('lib-js', function() {
 	// указываем путь к необходимым файлам
 	return gulp.src([
 		'resources/libs/jquery/dist/jquery.min.js',
-		'resources/libs/object-fit-images/dist/ofi.browser.js'
+		'resources/libs/object-fit-images/dist/ofi.browser.js',
+		'resources/libs/slick-carousel/slick/slick.js'
 	])
 	// склеиваем их в один файл, с учетом их порядка на предыдущем шаге 
 	.pipe(concat('lib.min.js'))
@@ -113,7 +116,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'lib-css', 'js', 'lib-js']
 	var buildJs = gulp.src([
 		'resources/js/lib.min.js',
 		'resources/js/common.js'
-		]).pipe(gulp.dest('public/js'));
+		])
+		.pipe(uglify())
+		.pipe(gulp.dest('public/js'));
 
 	var buildImg = gulp.src([
 		'resources/img/**/*',
