@@ -24,31 +24,6 @@ $(document).ready(function() {
 		}, 0);
 	}
 
-	//custom dropdown menu
-	$('.select-option_selected').click(function(){
-		var parent = $(this).parents('.select');
-		
-		parent.find('.select-list').fadeIn(0);
-		parent.toggleClass('select-open');
-	});
-
-	$('.select-list .select-option').click(function(){
-		var $this = $(this);
-		var text = $this.text();
-		$this.parents('.select').find('.select-option_selected').text(text);
-		$this.parents('.select').find('input[type="hidden"]').val(text);
-		$this.parents('.select-list').fadeOut(0);		
-		$this.parents('.select').removeClass('select-open');
-	});
-
-	$(function(){
-		$(document).click(function(event) {
-			if ($(event.target).closest(".select").length) return;
-			$(".select-list").fadeOut(0);		
-			$('.select').removeClass('select-open');
-			event.stopPropagation();
-		});
-	});
 
 	//tabs on JS
 	$('.tab-toggle').on('click' , function() {
@@ -121,7 +96,40 @@ $(document).ready(function() {
 	if (windowWidth <= 1024) {
 		$('.dropdown').append($('.header-nav .nav'));
 	};
+
+	$('.main-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		autoplay: true,
+		asNavFor: '.main-slider-nav'
+	});
+	$('.main-slider-nav').slick({
+		vertical: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.main-slider',
+		arrows: false,
+		dots: false,
+		autoplay: true,
+		focusOnSelect: true
+	});
 	
+	$('.advantages-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: '<button type="button" class="slick-prev">&nbsp;</button>',
+		nextArrow: '<button type="button" class="slick-next">&nbsp;</button>'
+	});
+
+	$('.slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: false,
+	});
 	
 
 }); 
