@@ -3,8 +3,8 @@
 	box-sizing: border-box
 
 body
-	font: 16px/1.44 'Conv_Lato-Regular'
-	color: #1f1f1f
+	font: 16px/24px $default-font
+	color: #000000
 
 h1
 	margin: 35px 0
@@ -53,6 +53,13 @@ a
 	overflow: hidden
 	text-overflow: ellipsis
 
+.text-gradient_secondary
+	background: -webkit-linear-gradient(top, #fff2d5, #ffb52b)
+	background: linear-gradient(top, #fff2d5, #ffb52b)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	color: map-get($colors, secondary)
+
 /*for-img*/
 .for-img
 	text-align: center
@@ -94,20 +101,10 @@ img
 		max-height: 100%
 		height: auto
 
-/*select*/
-.select
+/*forms*/
+.form-group
 	position: relative
-	width: 100%
 
-.select-list
-	display: none
-	position: absolute
-	top: 100%
-	left: 0
-	z-index: 30
-
-.select-option
-	cursor: pointer
 
 /*tabs ob JS*/
 .tab-toggle
@@ -129,9 +126,226 @@ img
 
 .container
 	width: 100%
-	max-width: 1500px
+	max-width: 1200px
 	margin: 0 auto
 	padding: 0 20px
+	&_sm
+		padding: 0 10px
 
 .content-wrapper
 	flex: 1 1 auto
+	padding: 17px 0
+	background: #ebecee
+
+
+/*HEADER*/
+.header
+	position: relative
+	box-shadow: 0 3px 4px 0 rgba(45,47,49,.43)
+.header-top
+	background: url(../img/grey-bg.png) repeat left top
+	box-shadow: inset 0px -5px 10px 0px rgba(0,0,0,.8)
+.header-top-inner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 43px
+.header-nav
+	display: flex
+	align-items: center
+.nav
+	display: flex
+	justify-content: flex-start
+	align-items: center
+.nav-item
+	margin-right: 28px
+.nav-link
+	font: 700 15px/21px $default-font
+	color: #ffffff
+	letter-spacing: -.2px
+	&:hover
+		color: map-get($colors, secondary)
+
+.dropdown-wrap
+	position: relative
+	margin-left: 4px
+	&:hover 
+		.burger
+			background: #ffffff
+			span
+				background: map-get($colors, secondary)
+		.dropdown
+			display: block
+
+.dropdown-show
+	display: flex
+	align-items: center
+	font: 700 15px/21px $default-font
+	color: #ffffff
+	letter-spacing: -.2px
+.burger
+	display: block
+	width: 42px
+	margin-left: 5px
+	padding: 9px 13px
+	background: transparent
+	border-radius: 3px 3px 0 0 
+	span
+		display: block
+		width: 15px
+		height: 2px
+		margin-bottom: 3px
+		background: #ffffff
+		&:last-child
+			margin-bottom: 0
+.dropdown
+	position: absolute
+	top: 100%
+	right: 0
+	display: none
+	min-width: 172px
+	background: #ffffff
+	padding: 10px 17px
+	border-radius: 3px 0 3px 3px
+	z-index: 100
+	.nav
+		flex-direction: column
+		align-items: flex-start
+	.nav-item
+		margin: 5px 0
+	.nav-link
+		display: inline-block
+		font: 700 15px/15px $default-font
+		color: #2c303a
+		&:hover
+			color: map-get($colors, secondary)
+.header-working-hour
+	font: 14px/21px $default-font
+	color: #ffffff
+.header-shops
+	a
+		border-bottom: 1px solid transparent
+		font: 700 17px/21px $default-font
+		&:hover
+			border-bottom: 1px solid map-get($colors, secondary)
+.header-action
+	margin-right: 23px
+	a
+		font: 16px/21px $default-font
+		color: #ffffff
+		&:hover
+			color: map-get($colors, secondary)
+
+.header-bottom
+	background: url(../img/blue-bg.png) repeat-x left top
+.header-bottom-inner
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	min-height: 100px
+	padding-top: 20px
+	padding-bottom: 9px
+.header-logo
+	flex: 0 0 224px
+	margin-right: 10px
+.header-search
+	flex: 1 1 100%	
+	margin: 2px 25px 0 0
+.search-form
+	text-align: right
+	font-weight: 700
+	.form-group
+		margin: 0 0 5px 0
+	.form-text
+		display: block
+		width: 100%
+		height: 40px
+		padding: 0 40px 0 15px
+		background: rgba(43,44,47,.72)
+		border: none
+		border-radius: 5px
+		text-align: left
+		color: #ffffff
+		box-shadow: inset 0 0 3px 1px rgba(0,0,0,.5), 0 0 1px 0 rgba(255,255,255,.5)
+	button
+		position: absolute
+		right: 12px
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		width: 18px
+		height: 18px
+		margin: 0
+		padding: 0
+		background: url(../img/search-icon.png) no-repeat center
+		background-size: cover
+		border: none
+		cursor: pointer
+
+.header-contact
+	display: flex
+	align-items: flex-start
+	margin: 7px 0
+.header-phone
+	margin-right: 19px
+	text-align: right
+	font: 14px/17px $default-font
+	color: #ffffff
+	&:last-child
+		margin-right: 0
+	.phone
+		font: 700 26px/21px $default-font
+		color: #ffffff
+		white-space: nowrap
+
+.header-basket
+	margin: 5px 44px
+.basket
+	position: relative
+	display: block
+	width: 50px
+	height: 51px
+	background: url(../img/basket.png) no-repeat center top
+.basket-number
+	position: absolute
+	top: -2px
+	left: 50%
+	transform: translateX(-50%)
+	display: block
+	width: 22px
+	height: 22px
+	background: map-get($colors, red)
+	border-radius: 50%
+	text-align: center
+	font: 13px/22px $default-font
+	color: #ffffff
+
+
+.content-inner
+	display: flex
+	align-items: flex-start
+
+/*ASIDE*/
+.aside
+	flex: 0 0 290px
+	margin-right: 10px
+.aside-block 
+	margin-bottom: 20px
+	background: #ffffff
+	border-radius: 3px
+	box-shadow: 0 0 7px 0 rgba(45,47,49,.45)
+	overflow: hidden
+.aside-header
+	padding: 13px 20px
+	background: url(../img/aside-header.png) repeat center top
+	font: 700 18px/24px $default-font
+	color: #ffffff
+	text-transform: uppercase
+.aside-body
+	padding: 15px 20px 15px 20px
+	background: #ffffff
+	
+
+/*MAIN*/
+.main
+	flex: 0 1 100%

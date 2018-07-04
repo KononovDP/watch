@@ -7,6 +7,7 @@
 	<meta name="keywords" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/lib.min.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -17,16 +18,116 @@
 	<div class="wrapper">
 		<!-- HEADER -->
 		<header class="header">
-			<div class="container">
-				<div class="header-inner">Привет!</div>
+			<div class="header-top">
+				<div class="header-top-inner container">
+					<nav class="header-nav">
+						<ul class="nav">
+							<li class="nav-item"><a href="#" class="nav-link">О компании</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Доставка и оплата</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Скидки</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Гарантии</a></li>
+							<li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
+						</ul> 
+						<div class="dropdown-wrap">
+							<div class="dropdown-show">
+								Информация
+								<div class="burger">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div class="dropdown">
+								<ul class="nav">
+									<li class="nav-item"><a href="#" class="nav-link">График работы</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">Войти</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">Новости</a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="header-working-hour">
+						<p>Работаем: Пн-Пт с 10:00 до 18:00 по МСК</p>
+					</div>
+					<div class="header-shops">
+						<a href="#" class="text-gradient_secondary">Наши розничные магазины</a>
+					</div>
+					<div class="header-action">
+						<a href="#">Войти</a>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="header-bottom-inner container">
+					<a href="#" class="header-logo for-img">
+						<img src="img/logo.png" alt="">
+					</a>
+					<div class="header-search">
+						<form action="" class="search-form">
+						 	<div class="form-group">
+						 		<input type="text" class="form-text" placeholder="Поиск по сайту">
+								<button>&nbsp;</button>
+						 	</div>
+						 	<a href="#" class="text-gradient_secondary">Расширенный поиск</a>
+						 </form> 
+					</div>
+					<div class="header-contact">
+						<div class="header-phone">
+							<a href="tel:8(800)200-27-70" class="phone">8 (800) 200-27-70</a>
+							<span>Бесплатно по России</span>
+						</div>
+						<div class="header-phone">
+							<a href="tel:(495)509-27-70" class="phone">(495) 509-27-70</a>
+							<span>Москва и Моск. обл.</span>
+						</div>
+					</div>
+					<div class="header-basket">
+						<a href="#" class="basket">
+							<span class="basket-number">0</span>
+						</a>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- HEADER END -->
 
 		<!-- CONTENT -->
 		<div class="content-wrapper">
-			<div class="container">
+			<div class="container container_sm">
 				<div class="content-inner">
+					<aside class="aside">
+						<div class="aside-block">
+							<div class="aside-header">Наши партнеры</div>
+							<div class="aside-body">
+								<div class="for-img"><img src="img/aside-partners.jpg" alt=""></div>
+							</div>
+						</div>
+						<div class="aside-block">
+							<div class="aside-header">Мы в контакте</div>
+							<div class="aside-body">
+								<div class="for-img"><img src="img/aside-social.jpg" alt=""></div>
+							</div>
+						</div>
+					</aside>
+
+					<div class="main">
+						<!-- MAIN SLIDER -->
+						<div class="main-slider"></div>
+						<!-- MAIN SLIDER END -->
+
+						<!-- ADVANTAGES -->
+						<div class="advantages"></div>
+						<!-- ADVANTAGES END -->
+
+						<!-- SECTION -->
+						<div class="section">
+							<div class="section-header">
+								<h2></h2>
+							</div>
+							<div class="section-body"></div>
+						</div>
+						<!-- SECTION END -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -43,6 +144,7 @@
 
 	<script src="js/lib.min.js"></script>
 	<script src="js/common.js"></script>
+
 </body>
 </html>
 		

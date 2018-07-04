@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-	var scrollTop = $(window).scrollTop();
+	var scrollTop = $(window).scrollTop(),
+		windowWidth = $(window).width();
 
 	//lock/unlock body scroll
 	function lockBody() {
@@ -115,5 +116,12 @@ $(document).ready(function() {
 	
 	//object-fit polyfill
 	objectFitImages('.cover-img')
+
+	//
+	if (windowWidth <= 1024) {
+		$('.dropdown').append($('.header-nav .nav'));
+	};
+	
+	
 
 }); 
