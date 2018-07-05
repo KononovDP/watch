@@ -17,6 +17,8 @@ h2
 		padding-left: 15px
 		border-left: 5px solid map-get($colors, main)
 		line-height: 25px
+	&.text-normal
+		text-transform: capitalize
 
 p
 	margin: 25px 0
@@ -925,3 +927,81 @@ img
 	.copy
 		margin: 0
 		font: 400 16px/21px $default-font
+
+/*BREADCRUMBS*/
+.breadcrumbs
+	display: flex
+	margin-bottom: 10px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
+	overflow: hidden
+.breadcrumb-link
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 54px
+	padding: 10px 21px 10px 17px
+	background: #ffffff
+	font: 700 14px/20px $default-font
+	color: map-get($colors, main)
+	&:before, &:after
+		position: absolute
+		top: -3px 
+		right: 0
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		border-top: 30px solid transparent
+		border-bottom: 30px solid transparent
+	&:after
+		transform: translateX(-1px)
+		border-left: 10px solid #ffffff
+	&:before
+		border-left: 10px solid map-get($colors, grey)
+
+	img
+		display: block
+.breadcrumb-link_current
+	cursor: default
+	pointer-events: none
+
+/*SALE*/
+.sale-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -10px
+.sale-col
+	width: 33.33%
+	padding: 0 10px
+.sale
+	display: flex
+	flex-direction: column
+	margin-bottom: 18px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
+	overflow: hidden
+	transition: all .5s
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
+	&:hover
+		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5)
+	&:active
+		box-shadow: 0 0 0 0 rgba(0,0,0,.5)
+.sale-header
+	padding: 6px 10px
+	background: map-get($colors, main)
+	text-align: center
+	font: 700 14px/18px $default-font
+	color: #ffffff
+.sale-body
+	padding: 10px 32px
+.sale-title
+	text-align: center
+	font: 700 16px/18px $default-font
+	color: #000000
+.sale-img
+	&:before
+		padding-top: 103% 
