@@ -455,6 +455,117 @@ img
 .aside
 	width: 290px
 	margin-right: 10px
+.aside-catalog-wrap
+	margin-bottom: 17px
+	background: url(../img/catalog-bg.png) repeat top center
+	border-radius: 3px
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.49) 
+	//overflow: hidden
+.aside-catalog-btn
+	position: relative	
+	padding: 16px 26px 14px 26px
+	font: 700 18px/24px $default-font
+	text-transform: uppercase
+	cursor: pointer
+	box-shadow: 0 1px 5px 3px rgba(0,0,0,.5)
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		top: 0
+		height: 100%
+		left: 0
+		width: 100%
+		background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.3))
+	&:hover
+		&:after
+			background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,0))
+	&:active
+		&:after
+			background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0))
+.aside-catalog
+	position: relative
+	display: block
+.catalog-menu
+	padding: 18px 0
+	border-bottom: 1px solid #000000
+	box-shadow: 0 1px 0 1px rgba(104,111,163,.61) 
+.catalog-item
+	display: flex
+	align-items: center
+	padding: 4px 10px 4px 20px
+	background-color: transparent
+	font: 700 17px/24px $default-font
+	color: #ffffff
+	cursor: pointer
+	transition: all .3s
+	&:hover
+		background: rgba(43,142,245,.46)
+		.catalog-dropdown
+			display: block
+.catalog-menu_sm
+	padding: 13px 0
+	.catalog-item
+		padding: 0 10px 0 20px
+.catalog-item-img
+	display: block
+	width: 32px
+	height: 35px
+	margin-right: 10px
+.catalog-sale
+	padding: 10px 10px 12px 25px
+	a
+		position: relative
+		display: block
+		padding-left: 35px
+		font: 700 18px/24px $default-font
+		&:before
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			display: block
+			content: ''
+			width: 23px
+			height: 23px
+			background: url(../img/search-icon-yellow.png) no-repeat center 
+
+.catalog-dropdown
+	position: absolute
+	top: 0
+	left: 100%
+	display: none
+	min-height: 100%
+	padding: 10px
+	background: rgba(43,142,245,.46) 
+	z-index: 100
+.catalog-dropdown-inner
+	padding: 22px 2px 10px 40px
+	background: #ffffff
+	border-radius: 5px
+.catalog-dropdown-row
+	display: flex
+.catalog-dropdown-col
+	min-width: 275px
+.catalog-dropdown-block
+	margin-bottom: 10px
+.catalog-dropdown-title
+	font: 700 20px/43px $default-font
+	color: map-get($colors, main)
+	text-transform: uppercase
+	text-decoration: underline
+.catalog-dropdown-list
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+.catalog-dropdown-link
+	font: 400 16px/30px $default-font
+	color: #3a3f4f
+	&:hover
+		text-decoration: underline
+
+
+
 .aside-block 
 	margin-bottom: 20px
 	background: #ffffff
@@ -700,9 +811,6 @@ img
 	flex-wrap: wrap
 .review-item
 	position: relative
-	display: flex
-	flex-direction: column
-	align-items: flex-start
 	width: 33.33%
 	padding: 0 15px
 	&:after
@@ -721,7 +829,6 @@ img
 	font: 700 18px/30px $default-font
 	color: #101010
 .review-text
-	flex: 1 1 auto
 	margin-bottom: 20px
 	padding: 15px 0
 .review-text-block
@@ -735,7 +842,7 @@ img
 .review-date
 	margin-bottom: 5px
 	font: 400 14px/24px $default-font
-
+ 
 /*FOOTER*/
 .footer
 	background: url(../img/footer-bg.png) repeat center top

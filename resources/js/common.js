@@ -136,5 +136,9 @@ $(document).ready(function() {
 		arrows: false,
 	});
 	
+	$('.aside-catalog-btn').on('click' , function() {
+		$(this).next('.aside-catalog').slideToggle(300);
+		return false;
+	})
 
 }); 
