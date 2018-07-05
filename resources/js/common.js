@@ -131,5 +131,10 @@ $(document).ready(function() {
 		arrows: false,
 	});
 	
+	$('.single-slider').slick({
+		dots: true,
+		arrows: false,
+	});
+	
 
 }); 
