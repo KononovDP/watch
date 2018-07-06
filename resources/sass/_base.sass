@@ -116,6 +116,22 @@ img
 .form-group
 	position: relative
 
+/*btn*/
+.btn
+	display: inline-block
+	padding: 6px 10px 7px 10px
+	background: map-get($colors, main)
+	border-radius: 3px
+	font: 700 14px/22px $default-font
+	color: #ffffff
+	transition: all .3s
+	&:hover
+		background: map-get($colors, mainLight)
+	&:active
+		background: map-get($colors, mainDark)
+.btn_sm
+	padding: 6px 27px 7px 26px
+
 
 /*tabs ob JS*/
 .tab-toggle
@@ -144,7 +160,7 @@ img
 	font: 700 18px/25px $default-font
 	color: #000000
 	text-transform: uppercase
-	transition: all .5s
+	transition: all .3s
 	&:hover
 		color: map-get($colors, main)
 .section-body
@@ -209,6 +225,11 @@ img
 
 .single-slider-wrap
 	margin: 0 5px
+
+.border
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
 
 .wrapper
 	display: flex
@@ -663,9 +684,6 @@ img
 .advantages
 	margin-bottom: 13px
 	padding: 18px 55px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
 .advantages-slide
 	display: flex
 	justify-content: flex-start
@@ -685,9 +703,6 @@ img
 .brand
 	display: flex
 	margin-bottom: 6px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey) 
-	border-radius: 5px
 	transition: all .5s
 	overflow: hidden
 	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
@@ -718,9 +733,6 @@ img
 .product
 	position: relative
 	padding: 35px 20px 20px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
 	text-align: center
 	transition: all .5s
 	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
@@ -775,9 +787,6 @@ img
 /*REVIEW*/
 .review
 	padding: 10px 12px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
 .review-header
 	display: flex
 	align-items: center
@@ -934,9 +943,6 @@ img
 .breadcrumbs
 	display: flex
 	margin-bottom: 10px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
 	overflow: hidden
 .breadcrumb-link
 	position: relative
@@ -982,9 +988,6 @@ img
 	display: flex
 	flex-direction: column
 	margin-bottom: 18px
-	background: #ffffff
-	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
 	overflow: hidden
 	transition: all .5s
 	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
@@ -1007,3 +1010,30 @@ img
 .sale-img
 	&:before
 		padding-top: 103% 
+
+/*PAYMENT*/
+.payment
+	margin-bottom: 9px
+	padding: 10px 20px
+	&:last-child
+		margin-bottom: 0
+.payment-header
+	font: 700 18px/22px $default-font
+	color: #000000
+.payment-body
+	display: flex
+	align-items: flex-start
+	padding: 11px 0 6px
+.payment-img 
+	flex: 0 0 90px
+	margin-right: 20px
+	font-size: 0
+	line-height: 0
+.payment-text
+	flex: 1 1 100%
+	display: flex
+	align-items: flex-start
+	font: 400 14px/20px $default-font
+.payment-action
+	flex: 1 0 90px
+	margin-left: 35px
