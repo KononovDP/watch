@@ -143,4 +143,6 @@ $(document).ready(function() {
 
 	$(".scrollbar").mCustomScrollbar();
 
+	$('select').selectric();
+
 }); 

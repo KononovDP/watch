@@ -67,6 +67,8 @@ a
 	overflow: hidden
 	text-overflow: ellipsis
 
+.text-main
+	color: map-get($colors, main)
 .text-red
 	color: map-get($colors, red)
 
@@ -121,6 +123,112 @@ img
 /*forms*/
 .form-group
 	position: relative
+.form-text
+	display: block
+	width: 100%
+	height: 37px
+	padding: 0 15px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px 
+label.label
+	font: 700 18px/24px $default-font
+	color: #333333
+
+/*custom select*/	
+.selectric
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px 
+	.label 
+		margin: 0 55px 0 15px
+		font: 700 14px/35px $default-font
+		color: #333333
+		height: 35px
+	.button 
+		width: 41px
+		height: 35px
+		line-height: 35px
+		background: transparent url(../img/arrow-down.png) no-repeat center
+		text-indent: -9999px
+		&:after
+			display: none
+.selectric-items 
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-top: none
+	border-radius: 0 0 3px 3px
+	box-shadow: none
+	li 
+		padding: 0 12px
+		font: 700 14px/30px $default-font
+		color: #000000	
+	li.highlighted 
+		background: #ffffff
+		color: map-get($colors, main)
+	li:hover 
+		background: map-get($colors, main)
+		color: #ffffff
+.selectric-open
+	.selectric
+		border-bottom-color: #ffffff
+		border-radius: 3px 3px 0 0
+
+/*custom radio*/
+.radio
+	position: relative
+	cursor: pointer
+	input
+		position: absolute
+		opacity: 0
+	.radiomark
+		position: relative
+		padding-left: 28px
+		font: 700 18px/24px $default-font
+		color: #000000			
+		&:before
+			box-sizing: border-box
+			position: absolute
+			top: 3px
+			left: 0
+			display: block
+			content: ''
+			width: 18px
+			height: 18px
+			background: #ffffff
+			border: 1px solid map-get($colors, grey)
+			border-radius: 50%
+	input:checked ~ .radiomark:before
+		background: map-get($colors, main)
+		box-shadow: inset 0 0 0 4px #ffffff 
+
+/*custom checkbox*/
+.checkbox
+	position: relative
+	cursor: pointer
+	input
+		position: absolute
+		opacity: 0
+	.checkboxmark
+		position: relative
+		padding-left: 25px
+		font: 400 14px/18px $default-font
+		color: #aaaaaa			
+		&:before
+			box-sizing: border-box
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			content: ''
+			width: 18px
+			height: 18px
+			background: #ffffff
+			border: 1px solid map-get($colors, grey)
+			border-radius: 3px
+	input:checked ~ .checkboxmark:before
+		background: #ffffff url(../img/checkmark.png) no-repeat center
+
 
 /*btn*/
 .btn
@@ -1174,3 +1282,155 @@ img
 		border-radius: 2px
 		font: 700 16px/20px $default-font
 		color: map-get($colors, main)
+
+/*DELIVERY*/
+.delivery-location
+	.input-wrap
+		display: flex
+		align-items: center
+		max-width: 406px
+		.select-wrap
+			flex: 1 1 auto
+	p
+		margin: 4px 0 8px
+		font-size: 14px
+
+.calc-header
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+	p
+		margin: 8px 0
+	b
+		font-weight: 700
+.calc-img
+	flex: 0 0 58px
+	margin-right: 14px
+	font-size: 0
+	line-height: 0
+.calc-text
+	padding-bottom: 10px
+.price-add
+	max-width: 250px
+	padding: 6px 0 10px
+	.label
+		font-size: 16px
+	.input-wrap
+		display: flex
+		align-items: center
+		margin: 3px 0
+	.form-text
+		color: map-get($colors, red)
+	.currency
+		padding: 0 10px
+		font: 700 16px/24px $default-font
+
+.delivery-table
+	width: 100%
+	.tr
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+		font: 400 16px/30px $default-font
+		color: #000000
+	.tr-head
+		background: map-get($colors, main)
+		border-radius: 3px
+		color: #ffffff
+		.td
+			padding: 4px 20px 6px
+	.td
+		padding: 0 20px
+		&:first-child
+			width: 36%
+		&:nth-child(2)
+			width: 18%
+		&:nth-child(3)
+			width: 22%
+		&:last-child
+			width: 24%
+	b
+		font-weight: 700
+
+.calc-footer
+	margin: 22px 0
+	border-top: 1px solid map-get($colors, grey)
+	font: 400 16px/24px $default-font
+	color: #010101
+	p
+		position: relative
+		margin: 13px 0 6px
+		padding-left: 10px
+	.star
+		position: absolute
+		left: 0
+		top: 7px
+		font-size: 30px
+	a
+		color: map-get($colors, main)
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.method-block
+	position: relative
+	margin-bottom: 28px
+	padding: 7px 0
+	&:last-child
+		margin-bottom: 0
+.method-title
+	position: absolute
+	top: -13px
+	left: 15px
+	display: inline-block
+	padding: 0 5px
+	background: #ffffff
+	font: 700 18px/24px $default-font
+	color: #010101
+.method-item
+	position: relative
+	padding: 12px 0 20px
+	&:after
+		position: absolute
+		left: 20px
+		right: 20px
+		bottom: 0
+		display: block
+		content: ''
+		height: 1px
+		background: map-get($colors, grey)
+	&:last-child
+		&:after
+			display: none
+.method-table
+	width: 100%
+	.tr
+		display: flex
+		align-items: center
+		margin-bottom: 4px
+		font: 400 16px/30px $default-font
+		color: #000000
+	.td
+		padding: 0 20px
+		&:first-child
+			width: 36%
+		&:nth-child(2)
+			width: 18%
+		&:nth-child(3)
+			width: 22%
+		&:last-child
+			width: 24%
+	img
+		display: block
+	b
+		font-weight: 700
+.method-descr
+	padding: 0 20px
+	font: 400 14px/17px $default-font
+	p
+		margin: 0 0 15px
+.method-action 
+	padding: 0 20px
+	text-align: right
+
+
