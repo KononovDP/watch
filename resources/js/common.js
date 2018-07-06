@@ -141,4 +141,6 @@ $(document).ready(function() {
 		return false;
 	})
 
+	$(".scrollbar").mCustomScrollbar();
+
 }); 
