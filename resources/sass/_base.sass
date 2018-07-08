@@ -210,10 +210,10 @@ label.label
 		position: absolute
 		opacity: 0
 	.checkboxmark
-		position: relative
-		padding-left: 25px
-		font: 400 14px/18px $default-font
-		color: #aaaaaa			
+		position: relative    
+		padding-left: 27px
+		font: 400 16px/16px "PT Sans Narrow",sans-serif
+		color: #2f333c
 		&:before
 			box-sizing: border-box
 			position: absolute
@@ -226,8 +226,11 @@ label.label
 			background: #ffffff
 			border: 1px solid map-get($colors, grey)
 			border-radius: 3px
-	input:checked ~ .checkboxmark:before
-		background: #ffffff url(../img/checkmark.png) no-repeat center
+	input:checked ~ .checkboxmark
+		font-weight: 700
+		color: map-get($colors, main)
+		&:before
+			background: #ffffff url(../img/checkmark.png) no-repeat center
 
 
 /*btn*/
@@ -646,7 +649,7 @@ label.label
 			background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0))
 .aside-catalog
 	position: relative
-	display: block
+	display: none
 .catalog-menu
 	padding: 18px 0
 	border-bottom: 1px solid #000000
@@ -1527,3 +1530,137 @@ label.label
 .shop-brand a
 	color: map-get($colors, main)
 	font-weight: 700
+
+/*CATALOG PAGE*/
+.filter-body
+	padding: 0
+.filter-label
+	margin-bottom: 13px
+	font: 700 17px/20px $default-font
+	color: #2f333c
+.filter-done
+	padding: 17px 20px
+	border-bottom: 1px solid map-get($colors, grey)
+.filter-done-list
+	margin-bottom: 12px
+.filter-done-item
+	margin-bottom: 7px
+.filter-tag
+	display: inline-flex
+	align-items: center
+	justify-content: flex-start
+	margin: 2px 0
+	padding: 0px 6px 1px 8px
+	background: map-get($colors, main)
+	border-radius: 3px
+	color: #ffffff	
+	transition: all .3s
+	&:hover
+		background: map-get($colors, mainLight)
+	&:active
+		background: map-get($colors, mainDark)
+	span
+		margin: 0 0px 0 10px
+		font-size: 0
+		line-height: 0
+		cursor: pointer
+.filter-done-action
+	text-align: right
+	text-decoration: underline
+	a
+		color: #000000
+		&:hover
+			color: map-get($colors, main)
+
+.filter-accordion
+	.accordion-item
+		border-bottom: 1px solid map-get($colors, grey)
+	.accordion-header
+		position: relative
+		padding: 15px 40px 15px 20px
+		font: 700 17px/20px $default-font
+		color: #2f333c
+		cursor: pointer
+		&:after
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 23px
+			display: block
+			content: ''
+			width: 10px
+			height: 5px
+			background: url(../img/accordion-icon.png) no-repeat center
+	.accordion-body
+		display: none
+		padding: 0 23px 11px 23px
+	.filter-price
+		max-width: none
+	.accordion-list
+		li
+			margin-bottom: 8px
+			&:last-child
+				margin-bottom: 0
+	.accordion-body-action
+		margin: 12px -8px 6px 0
+		text-align: right
+		a
+			font: 400 16px/16px $default-font
+			color: #2f333c
+			text-decoration: underline
+			&:hover
+				color: map-get($colors, main)
+
+/*buuner*/
+.bunner
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	min-height: 120px
+	margin-bottom: 10px
+	padding: 20px
+	background: #010101 url(../img/bunner-bg.png) no-repeat left top
+	background-size: cover
+	border-radius: 3px
+.bunner-text
+	width: 100%
+	max-width: 370px
+.bunner-title
+	font: 700 24px/28px $default-font
+	color: #ffffff
+.bunner-subtitle
+	font: 400 14px/21px $default-font
+	color: #505f83
+
+/*catalog toolbar*/
+.catalog-toolbar
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 10px 0
+.catalog-view-toggle
+	display: flex
+.toggler
+	display: block
+	width: 38px
+	height: 38px
+	margin-right: 6px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px
+	&:last-child
+		margin-right: 0
+/*catalog grid*/
+.catalog-grid
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -5px
+.catalog-col
+	width: 100%
+	padding: 0 5px 10px 5px
+.catalog-grid-4
+	.catalog-col
+		width: 25%
+.catalog-grid-2
+	.catalog-col
+		width: 50%

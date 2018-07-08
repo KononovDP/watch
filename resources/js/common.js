@@ -145,4 +145,9 @@ $(document).ready(function() {
 
 	$('select').selectric();
 
+	$('.accordion-header').on('click' , function(){
+		$(this).closest('.accordion-item').find('.accordion-body').slideToggle(300);
+		return false
+	})
+
 }); 
