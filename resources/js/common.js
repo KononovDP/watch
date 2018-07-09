@@ -3,6 +3,15 @@ $(document).ready(function() {
 	var scrollTop = $(window).scrollTop(),
 		windowWidth = $(window).width();
 
+	(function($) {
+		$.fn.removeClassWild = function(mask) {
+			return this.removeClass(function(index, cls) {
+				var re = mask.replace(/\*/g, '\\S+');
+				return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+			});
+		};
+	})(jQuery);
+	
 	//lock/unlock body scroll
 	function lockBody() {
 		if($(window).scrollTop()) {
@@ -150,4 +159,21 @@ $(document).ready(function() {
 		return false
 	})
 
+
+	$('.toggler').on('click' , function() {
+		$('.toggler').removeClass('toggler_active');
+		$(this).addClass('toggler_active');
+		$('.catalog-grid').removeClassWild('catalog-grid-*');
+		return false
+	});
+
+	$('.toggler_one').on('click' , function() {
+		$('.catalog-grid').addClass('catalog-grid-1')
+	})
+	$('.toggler_two').on('click' , function() {
+		$('.catalog-grid').addClass('catalog-grid-2')
+	})
+	$('.toggler_four').on('click' , function() {
+		$('.catalog-grid').addClass('catalog-grid-4')
+	})
 }); 

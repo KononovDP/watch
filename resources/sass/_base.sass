@@ -370,6 +370,45 @@ label.label
 	border: 1px solid map-get($colors, grey)
 	border-radius: 5px
 
+/*PAGINATION*/
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+.pagination-link
+	display: block
+	width: 38px
+	height: 38px
+	margin-right: 3px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px
+	text-align: center
+	font: 700 14px/36px $default-font
+	color: #3a3f4f
+	&:last-child
+		margin-right: 0
+	&:hover
+		transform: scale(1.05)
+		box-shadow: 0 5px 5px -2px map-get($colors, grey)
+.pagination-link_active
+	background: map-get($colors, main)
+	border-color: map-get($colors, main)
+	color: #ffffff
+	cursor: default
+	pointer-events: none
+	&:hover
+		transform: scale(1)
+		box-shadow: none
+.pagination-link_first
+	background: #ffffff url(../img/pagination-first.png) no-repeat center
+.pagination-link_prev
+	background: #ffffff url(../img/pagination-prev.png) no-repeat center
+.pagination-link_next
+	background: #ffffff url(../img/pagination-next.png) no-repeat center
+.pagination-link_last
+	background: #ffffff url(../img/pagination-last.png) no-repeat center
+
 .wrapper
 	display: flex
 	flex-direction: column
@@ -1632,35 +1671,496 @@ label.label
 	font: 400 14px/21px $default-font
 	color: #505f83
 
+/**/
+.catalog-preview-header
+	padding: 0 20px
+	border-bottom: 1px solid map-get($colors, grey)
+	.catalog-preview-title
+		margin: 6px 0 7px
+		font: 700 28px/36px $default-font
+.catalog-preview-body
+	padding: 27px 20px 13px
+	display: flex
+	align-items: flex-start
+.catalog-preview-img
+	flex: 0 0 200px 
+	margin-right: 25px
+.catalog-preview-text
+	flex: 0 1 100%
+.catalog-preview-cat
+	display: flex
+	flex-wrap: wrap
+	li
+		display: flex
+		align-items: center
+		margin: 2px 18px 2px 0 
+	.cat-label
+		display: inline-block
+		margin-right: 6px
+		padding: 0 10px
+		background: map-get($colors, red)
+		border-radius: 3px
+		font: 700 16px/25px $default-font
+		color: #ffffff
+	.cat-text
+		font: 400 16px/20px $default-font
+		color: #232b4e
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.catalog-preview-tab
+	display: flex
+	flex-wrap: wrap
+	.tabs-header
+		padding: 6px 0
+		a
+			display: inline-block
+			margin-right: 24px
+			font: 700 16px/20px $default-font
+			color: #232b4e
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	.tab-content
+		padding: 8px 0
+		font: 400 16px/20px $default-font
+		color: #232b4e
+
+
+
+
 /*catalog toolbar*/
 .catalog-toolbar
 	display: flex
 	justify-content: space-between
 	align-items: center
 	padding: 10px 0
+	.select-wrap
+		display: flex
+		align-items: center
+		margin: 0 10px 
+	.select-label
+		margin-right: 10px
+
 .catalog-view-toggle
-	display: flex
+	display: flex       
 .toggler
 	display: block
 	width: 38px
 	height: 38px
-	margin-right: 6px
-	background: #ffffff
+	margin-right: 4px
 	border: 1px solid map-get($colors, grey)
 	border-radius: 3px
+	cursor: pointer
 	&:last-child
 		margin-right: 0
+	&:hover
+		transform: scale(1.05)
+		box-shadow: 0 5px 5px -2px map-get($colors, grey)
+.toggler_active
+	background: map-get($colors, main)
+	border-color: map-get($colors, main) 
+	cursor: default
+	&:hover
+		transform: scale(1)
+		box-shadow: none
+.toggler_one
+	background: #ffffff url(../img/toggler-one.png) no-repeat center
+.toggler_one.toggler_active
+	background: map-get($colors, main) url(../img/toggler-one-active.png) no-repeat center
+.toggler_two
+	background: #ffffff url(../img/toggler-two.png) no-repeat center
+.toggler_two.toggler_active
+	background: map-get($colors, main) url(../img/toggler-two-active.png) no-repeat center
+.toggler_four
+	background: #ffffff url(../img/toggler-four.png) no-repeat center
+.toggler_four.toggler_active
+	background: map-get($colors, main) url(../img/toggler-four-active.png) no-repeat center
+
+.catalog-toolbar_footer
+	justify-content: flex-end
+.catalog-info
+	margin: 0 30px
+	font: 400 16px/20px $default-font
+	color: #8d909a
+
 /*catalog grid*/
 .catalog-grid
 	display: flex
 	flex-wrap: wrap
 	margin: 0 -5px
 .catalog-col
-	width: 100%
 	padding: 0 5px 10px 5px
-.catalog-grid-4
-	.catalog-col
-		width: 25%
+
+.prod
+	display: flex
+	flex-direction: column
+	align-items: center 
+	width: 100%
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
+	&:hover
+		.prod-action
+			display: block
+		.prod-prev
+			opacity: 1
+
+.prod-left
+	width: 100%
+.prod-title
+	margin: 15px 0 10px
+	text-align: center
+	color: #000000
+.prod-brand
+	font: 700 18px/20px $default-font
+.prod-model
+	font: 700 20px/20px $default-font
+.prod-img
+	position: relative
+	width: 100%
+	max-width: 156px
+	margin: 0 auto
+	&:before
+		padding-top: 133%
+	.prod-prev
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		display: block
+		width: 100%
+		max-width: 156px
+		background: rgba(3,39,76,.57)
+		border-radius: 3px
+		text-align: center
+		font: 700 14px/35px $default-font
+		color: #ffffff
+		opacity: 0
+		transition: all .3s 
+.prod-info
+	display: none
+
+.prod-right
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 100%
+	padding: 6px 13px
+
+.prod-price
+	display: flex
+	flex-direction: column
+	align-items: center
+	.old-price
+		font: 700 16px/20px $default-font
+		color: map-get($colors, main)
+		text-decoration: line-through
+	.sale-number
+		display: inline-block
+		margin-left: 5px
+		padding: 0 4px
+		background: map-get($colors, red)
+		border-radius: 3px
+		font: 700 14px/20px $default-font
+		color: #ffffff
+	.new-price
+		font: 700 21px/20px $default-font
+		color: map-get($colors, red)
+	.price-currency
+		font: 700 21px/20px $default-font
+		color: map-get($colors, main)
+
+.prod-action
+	position: absolute
+	left: -1px
+	right: -1px
+	top: 100%
+	display: none
+	margin-top: -3px
+	padding: 5px 9px 12px
+	background: #fff
+	border: 1px solid map-get($colors, grey)
+	border-top: none
+	border-radius: 0 0 5px 5px
+	.prod-action-inner
+		display: flex
+		width: 100%
+		height: 45px
+		border-radius: 3px
+		overflow: hidden
+		a
+			background-color: map-get($colors, main)	
+			&:hover
+				background-color: map-get($colors, mainLight)
+			&:active
+				background-color: map-get($colors, mainDark)
+	.prod-buy
+		position: relative
+		flex: 0 1 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		font: 700 16px/20px $default-font
+		color: #ffffff
+		&:after
+			position: absolute
+			right: 0
+			top: 0
+			height: 100%
+			display: block
+			content: ''
+			width: 1px
+			background: rgba(255,255,255,.16)
+		.prod-buy-icon
+			display: block
+			width: 20px
+			height: 20px
+			margin-right: 5px
+			background: url(../img/prod-buy.png) no-repeat center
+	.prod-compare
+		position: relative
+		flex: 0 0 45px
+		background: map-get($colors, main) url(../img/prod-compare.png) no-repeat center
+		&:after
+			position: absolute
+			right: 0
+			top: 0
+			height: 100%
+			display: block
+			content: ''
+			width: 1px
+			background: rgba(255,255,255,.16)
+	.prod-fav
+		flex: 0 0 45px
+		background: map-get($colors, main) url(../img/prod-fav.png) no-repeat center
+	.buy-now
+		display: none
+
+.prod-meta
+	padding: 6px 0 9px 
+	font: 700 14px/20px $default-font
+	color: #000000
+	a
+		color: map-get($colors, main)
+	p
+		margin: 0
+	p:last-child
+		display: none
+	.prod-meta-icon
+		vertical-align: middle
+		display: inline-block
+		width: 22px
+		height: 22px
+		margin-left: 3px
+		border: 1px solid map-get($colors, grey)
+		border-radius: 3px
+
+/*catalog 2*/
 .catalog-grid-2
 	.catalog-col
 		width: 50%
+	.prod-left
+		display: flex
+		padding: 18px 0 9px
+	.prod-title
+		display: none
+	.prod-img
+		width: 48%
+		max-width: none
+		margin: 0
+		padding: 0 30px
+	.prod-info
+		display: block
+		width: 52%
+	.prod-info-item
+		margin-bottom: 3px
+		padding-left: 10px
+	.prod-info-label
+		position: relative 
+		font: 400 14px/20px $default-font
+		color: rgba(0,0,0,.55)
+		&:before
+			position: absolute
+			top: 6px
+			left: -10px
+			display: block
+			content: ''
+			width: 5px
+			height: 9px
+			background: url(../img/arrow-right.png) no-repeat center
+	.prod-info-text
+		font: 700 16px/20px $default-font
+		color: #000000
+	.prod-info-char
+		display: flex
+		flex-wrap: wrap
+		margin: 7px -3px 0
+		li
+			display: block
+			width: 28px
+			height: 28px
+			margin: 3px
+			border: 1px solid map-get($colors, grey)
+			border-radius: 3px
+	.prod-info-link
+		font: 700 14px/20px $default-font
+		color: map-get($colors, main)
+
+	.prod-right
+		flex-direction: row
+		flex-wrap: wrap
+		padding: 0
+	.prod-price
+		position: relative
+		width: 48%
+		height: 45px
+		background: #e5e5e5
+		border-left: 5px solid map-get($colors, main)
+		&:after
+			position: absolute
+			top: 0
+			left: 100%
+			display: block
+			content: ''
+			width: 0
+			height: 0
+			border-left: 9px solid #e5e5e5
+			border-top: 22.5px solid transparent
+			border-bottom: 22.5px solid transparent
+			z-index: 10
+	.prod-action 
+		position: static
+		width: 52%
+		display: block
+		margin-top: 0
+		padding: 0
+		background: transparent
+		border: none
+		border-top: none
+		border-radius: 0
+		.prod-action-inner
+			border-radius: 0
+		.prod-compare
+			flex: 0 0 56px
+		.prod-fav
+			flex: 0 0 56px
+
+	.prod-meta
+		display: flex
+		width: 100%
+		padding: 9px 13px
+		p
+			margin-right: 5px
+		p:last-child
+			display: block
+
+
+/*catalog 1*/
+.catalog-grid-1
+	.catalog-col
+		width: 100%
+	.prod
+		flex-direction: row
+		padding: 20px 0
+	.prod-left
+		display: flex
+		width: 51%
+		padding: 3px 30px
+		border-right: 1px solid map-get($colors, grey)
+	.prod-title
+		display: none
+	.prod-img
+		width: 156px
+		margin: 0
+	.prod-info
+		display: block
+		width: calc(100% - 156px)
+		padding-left: 20px
+	.prod-info-item
+		margin-bottom: 3px
+		padding-left: 10px
+	.prod-info-label
+		position: relative 
+		font: 400 14px/20px $default-font
+		color: rgba(0,0,0,.55)
+		&:before
+			position: absolute
+			top: 6px
+			left: -10px
+			display: block
+			content: ''
+			width: 5px
+			height: 9px
+			background: url(../img/arrow-right.png) no-repeat center
+	.prod-info-text
+		font: 700 16px/20px $default-font
+		color: #000000
+	.prod-info-char
+		display: flex
+		flex-wrap: wrap
+		margin: 7px -3px 0
+		li
+			display: block
+			width: 28px
+			height: 28px
+			margin: 3px
+			border: 1px solid map-get($colors, grey)
+			border-radius: 3px
+	.prod-info-link
+		font: 700 14px/20px $default-font
+		color: map-get($colors, main)
+
+	.prod-right
+		align-self: flex-end
+		width: 49%
+		flex-direction: row
+		flex-wrap: wrap
+		padding: 0 20px
+	.prod-price
+		position: relative
+		width: 50%
+		align-items: flex-start
+		padding: 0 10px
+		.old-price
+			font: 700 22px/27px $default-font
+		.sale-number
+			padding: 0 5px
+			font: 700 19px/27px $default-font
+		.new-price
+			font: 700 28px/27px $default-font
+		.price-currency
+			font: 700 28px/27px $default-font
+
+	.prod-action 
+		position: static
+		width: 50%
+		display: block
+		margin-top: 0
+		padding: 0
+		background: transparent
+		border: none
+		border-top: none
+		border-radius: 0
+	.buy-now
+		display: inline-block
+		background-color: transparentq
+		font: 700 14px/20px $default-font
+		color: map-get($colors, main)
+		text-decoration: underline
+
+	.prod-meta
+		width: 100%
+		margin-top: 44px
+		padding: 13px 7px 2px
+		border-top: 1px solid map-get($colors, grey)
+		p
+			margin: 3px 0
+		p:last-child
+			display: block
+
+
+/*catalog 4*/
+.catalog-grid-4
+	.catalog-col
+		width: 25%
