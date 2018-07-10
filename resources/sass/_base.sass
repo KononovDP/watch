@@ -26,6 +26,11 @@ h3
 	text-transform: uppercase
 	text-decoration: underline
 
+h4
+	margin: 10px 0
+	display: inline-block
+	font: 700 18px/24px $default-font
+
 p
 	margin: 25px 0
 
@@ -2435,3 +2440,85 @@ textarea.form-text
 		justify-content: space-between
 		p
 			font: 700 14px/30px $default-font
+
+/*PRODUCT PAGE*/
+.block-descr
+	display: block
+	margin-bottom: 18px
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
+	&:last-child
+		margin-bottom: 0
+.block-descr-header
+	margin-top: -13px
+	padding: 0 12px
+.block-descr-title
+	display: inline-block
+	padding: 0 10px
+	background: #ffffff
+	font: 700 18px/24px $default-font
+.block-descr-body
+	padding: 10px 20px 18px 24px
+	font: 400 16px/17px $default-font
+.block-descr-list
+	li
+		margin-bottom: 12px
+		font: 400 16px/17px $default-font
+	.block-descr-label
+		font: 700 16px/24px $default-font
+
+
+
+.product-information
+	margin-bottom: 10px
+	border: 1px solid map-get($colors, grey)
+	border-radius: 5px
+	overflow: hidden
+	.tabs-header
+		display: flex
+		padding: 10px 19px 0 19px
+		background: url(../img/aside-header.png) repeat-x left top
+	.tab-toggle
+		padding: 8px 20px 8px 20px
+		border-radius: 5px 5px 0 0
+		font: 700 16px/24px $default-font
+		color: #ffffff
+		text-transform: uppercase
+		&_active
+			background: #ffffff
+			color: map-get($colors, main)
+	.tab-content
+		padding: 23px 19px 22px 19px
+		background: #ffffff
+.product-description
+	display: flex
+.product-description-char
+	width: 40%
+	li
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin: 6px 0
+	.char-icon
+		display: block
+		width: 28px
+		height: 28px
+		margin-right: 12px
+		border: 1px solid map-get($colors, grey)
+		border-radius: 3px
+
+.product-description-descr
+	width: 60%
+	padding: 10px 0
+
+.twin
+	display: flex
+	align-items: flex-start
+	padding: 0 15px
+.twin-img
+	width: 101px
+	&:before
+		padding-top: 156%
+.twin-text
+	width: calc(100% - 101px)
+	padding: 7px 13px 21px 29px
