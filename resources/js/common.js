@@ -48,55 +48,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//popup
-	$('.js-show-popup').on('click', function() {
-		var dataPopup = $(this).attr("data-popup");
-
-		$(".popup-overlay[data-popup='"+dataPopup+"']").fadeIn('500');
-
-		var parentHeight = $('.popup-centering').height();
-		var childrenHeight = $('.popup').height();
-
-		if (childrenHeight >= parentHeight) {
-			$('.popup').addClass('popup-scrollable');
-		} else {
-			$('.popup').removeClass('popup-scrollable');
-		}
-
-		$(window).resize(function(event) {
-			var parentHeight = $('.popup-centering').height();
-
-			var childrenHeight = $('.popup').height();
-
-			if (childrenHeight >= parentHeight) {
-				$('.popup').addClass('popup-scrollable');
-			} else {
-				$('.popup').removeClass('popup-scrollable');
-			}
-		});
-	});
-
-	$('.js-close-popup').on('click' , function() {
-		$('.popup-overlay').fadeOut('500');
-	});
-
-	
-	//blocks with equal height
-	$(window).on('load resize', function() {
-		$(".item-wrap").each(function () {
-			var itemParent = $(this);
-			var maxHeight = 0;
-
-			itemParent.find('.item').each(function () {
-			   $(this).height('auto');
-			   var itemHeight = parseInt($(this).height());
-			   if(itemHeight > maxHeight) {
-				  maxHeight = itemHeight;
-			   };
-			});
-			itemParent.find('.item').height(maxHeight);
-		})
-	});
 	
 	//object-fit polyfill
 	objectFitImages('.cover-img')
@@ -130,7 +81,25 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		arrows: true,
 		prevArrow: '<button type="button" class="slick-prev">&nbsp;</button>',
-		nextArrow: '<button type="button" class="slick-next">&nbsp;</button>'
+		nextArrow: '<button type="button" class="slick-next">&nbsp;</button>',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 
 	$('.slider').slick({
@@ -138,6 +107,24 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,
 		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 	
 	$('.single-slider').slick({

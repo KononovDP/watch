@@ -704,7 +704,7 @@ textarea.form-text
 	left: 100%
 	top: 20%
 	transform: translateX(-60px)
-	z-index: 100
+	z-index: 110
 .sticky-item
 	display: flex
 	justify-content: flex-start
@@ -714,11 +714,11 @@ textarea.form-text
 	padding: 12px 10px 10px 14px
 	background: url(../img/sticky-bg.png) repeat left top
 	border-radius: 5px 0 0 5px 
-	transition: all .5s
+	transition: margin-left .5s
 	overflow: hidden
 	cursor: pointer
 	&:hover
-		transform: translateX(calc(-100% + 60px))
+		margin-left: -72px
 .sticky-img
 	width: 35px
 	height: 30px
@@ -753,7 +753,7 @@ textarea.form-text
 	font: 700 18px/24px $default-font
 	text-transform: uppercase
 	cursor: pointer
-	box-shadow: 0 1px 5px 3px rgba(0,0,0,.5)
+	box-shadow: 0 1px 5px 3px rgba(0,0,0,.2)
 	&:after
 		display: block
 		content: ''
@@ -769,6 +769,12 @@ textarea.form-text
 	&:active
 		&:after
 			background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0))
+	.catalog-btn-icon
+		display: inline-block
+		width: 18px
+		height: 16px
+		margin-right: 5px
+		margin-bottom: -1px
 .aside-catalog
 	position: relative
 	display: none
@@ -832,7 +838,7 @@ textarea.form-text
 .catalog-dropdown-row
 	display: flex
 .catalog-dropdown-col
-	min-width: 275px
+	width: 275px
 .catalog-dropdown-block
 	margin-bottom: 10px
 .catalog-dropdown-title
@@ -842,10 +848,6 @@ textarea.form-text
 	text-decoration: underline
 	&:hover 
 		text-decoration: none
-.catalog-dropdown-list
-	display: flex
-	flex-direction: column
-	align-items: flex-start
 .catalog-dropdown-link
 	font: 400 16px/30px $default-font
 	color: #3a3f4f
@@ -1769,7 +1771,7 @@ textarea.form-text
 	flex: 0 0 200px 
 	margin-right: 25px
 .catalog-preview-text
-	flex: 0 1 100%
+	flex: 1 1 auto 
 .catalog-preview-cat
 	display: flex
 	flex-wrap: wrap
@@ -1792,9 +1794,9 @@ textarea.form-text
 		&:hover
 			text-decoration: none
 .catalog-preview-tab
-	display: flex
-	flex-wrap: wrap
 	.tabs-header
+		display: flex
+		flex-wrap: wrap
 		padding: 6px 0
 		a
 			display: inline-block
@@ -2003,6 +2005,7 @@ textarea.form-text
 			background: url(../img/prod-buy.png) no-repeat center
 	.prod-compare
 		position: relative
+		display: block
 		flex: 0 0 45px
 		background: map-get($colors, main) url(../img/prod-compare.png) no-repeat center
 		&:after
@@ -2015,6 +2018,7 @@ textarea.form-text
 			width: 1px
 			background: rgba(255,255,255,.16)
 	.prod-fav
+		display: block
 		flex: 0 0 45px
 		background: map-get($colors, main) url(../img/prod-fav.png) no-repeat center
 	.buy-now
@@ -2388,6 +2392,7 @@ textarea.form-text
 	&:last-child
 		margin-bottom: 0
 	.label
+		display: inline-block
 		width: 169px
 		padding: 6px 0
 	.form-group

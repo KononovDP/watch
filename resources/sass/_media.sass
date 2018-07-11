@@ -1,55 +1,354 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1199px)
+	.nav-item
+		margin-right: 20px
+	.header-action
+		margin-right: 0
+	.header-basket 
+		margin: 5px 0 5px 44px
+
+@media only screen and (max-width : 1024px)
+	.sticky
+		display: none
+	.container_sm 
+		padding: 0 20px
+
+	/*header*/
+	.dropdown 
+		right: auto
+		left: calc(100% - 42px)
+		border-radius: 0 3px 3px 3px
+
+	.header-bottom 
+		background: url(../img/blue-bg-mobile.png) repeat left top
+		background-size: cover
+	.header-bottom-inner
+		flex-wrap: wrap
+		min-height: inherit
+	.header-search 
+		flex: 1 0 100%
+		margin: 5px 0 8px
+		order: 1
+	.search-form
+		display: flex
+		align-items: center
+		.form-group 
+			flex: 0 1 100%
+			margin: 0
+		a
+			margin: 0 15px 0 10px
+			white-space: nowrap
+	.header-contact
+		margin-left: auto
+
+	.content-wrapper
+		padding: 11px 0
+	.content-inner
+		flex-wrap: wrap
+	.aside 
+		width: 100%
+		margin-right: 0
+	.aside-widget
+		display: none
+	.aside-catalog-wrap
+		margin-bottom: 10px
+	.aside-catalog-btn
+		text-align: center
+	.catalog-item
+		flex-wrap: wrap
+		padding: 5px 20px
+		&:hover
+			background-color: transparent
+	.catalog-dropdown
+		position: static
+		left: 0
+		width: 100%
+		min-height: inherit
+		margin: 10px 0
+		padding: 0
+		background-color: transparent
+	.catalog-dropdown-inner
+		padding: 10px 20px
+	.catalog-dropdown-col
+		width: 50%
+
+	.main
+		width: 100%
+
+	/*main slider*/
+	.main-slider-wrap
+		margin-bottom: 10px
+	.main-slider 
+		width: 65.788%
+	.main-slide-text 
+		padding: 11px 10px 12px 19px
+		font-size: 16px
+
+	.main-slider-nav 
+		width: calc(34.212% + 8px)
+
+	/*advantages*/
+	.advantages
+		margin-bottom: 10px
+	.slick-prev
+		left: -38px
+	.slick-next
+		right: -38px
+
+	/*brand*/
+	.brand-img
+		width: 90px
+	.brand-text 
+		width: calc(100% - 90px)
+		padding: 8px 10px 10px 12px
+
+	/*review*/
+	.single-slider-wrap
+		margin: 0
+	.review 
+		padding: 10px 20px
+	.review-header 
+		padding: 10px 0 18px 0
+	.review-shop-logo
+		margin-right: 21px
 
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+	.review-item
+		display: none
+		width: 50%
+		&:first-child, &:nth-child(2)
+			display: block
+		&:nth-child(2):after
+			display: none
+	.review-text 
+		margin-bottom: 0
+		padding: 15px 0 5px
 
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
+	/*about*/
+	.about
+		display: none
+
+	/*footer*/
+	.footer-top
+		padding: 0
+		&:after
+			display: none
+	.footer-top-inner
+		padding: 0
+	.footer-top-left
+		align-items: center
+		justify-content: center
+		width: 300px
+	.footer-logo 
+		margin-right: 20px
+		margin-top: 53px
+	
+	.footer-nav-block
+		display: none
+	.footer-top-right
+		width: calc(100% - 300px)
+		padding: 26px 73px 21px
+		background: rgba(0,0,0,.18)
+	.footer-bottom
+		padding: 9px 0
+	.footer-bottom-inner 
+		padding: 0 40px
+		.copy
+			display: none
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 767px)
+	h2
+		font-size: 18px
+		&.bordered
+			padding-left: 5px
+	
+	.section
+		margin-bottom: 10px
+	.section-header-link
+		font-size: 14px
+	.section-body
+		padding: 0 10px 10px 10px
+	/*header*/
+	.header-top-inner
+		height: 41px
+	.header-working-hour
+		display: none
+	.header-bottom-inner
+		padding: 15px 20px 10px 12px
+	.header-logo
+		flex: 0 0 146px
+	.header-shops
+		margin-left: auto
+	.header-contact
+		margin: 4px 0 4px auto
+	.header-search
+		margin: 2px 0 1px
+	.search-form 
+		.form-text
+			height: 34px
+		a 
+			margin: 0 10px 0 10px
+			font-size: 14px
+
+	.header-action
+		margin-left: 40px
+	.header-phone 
+		margin-right: 15px
+		font: 12px/17px "PT Sans Narrow",sans-serif
+	.header-phone .phone 
+		font: 700 16px/16px "PT Sans Narrow",sans-serif
+	.header-basket 
+		margin: 5px 0 5px 15px
+	.basket 
+		width: 30px
+		height: 31px
+		background-size: cover
+	.basket-number 
+		top: -3px
+		width: 13px
+		height: 13px
+		font: 8px/13px "PT Sans Narrow",sans-serif
+	
+	/*aside*/
+	.aside-catalog-btn 
+		padding: 10px 26px 8px 26px
+
+	/*main*/
+	.advantages,
+	.main-slider-wrap
+		display: none
+	
+	/*review*/
+	.review 
+		padding: 10px 16px
+
+	.review-header
+		flex-wrap: wrap
+		justify-content: center
+		padding: 6px 0 14px 0
+	.review-shop-logo
+		flex: 0 0 100%	
+		margin: 0 0 9px 0
+		img
+			max-width: 120px
+			margin: auto
+	.review-shop-info
+		width: calc(100% - 130px)
+		margin: 0
+	.review-action
+		width: 130px
+	.review-shop-label 
+		margin-right: 5px
+		font: 700 16px/24px "PT Sans Narrow",sans-serif
+	.review-shop-descr
+		font-size: 12px
+		line-height: 12px
+	.review-item
+		width: 100%
+		padding: 0 10px
+		&:first-child
+			display: block
+		&:nth-child(2)
+			display: none
+		&:after
+			display: none
+	.review-body
+		padding: 14px 0 0
 
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+	/*footer*/
+	.footer-top-left
+		width: 188px
+		padding: 0 10px
+	.footer-logo 
+		margin: 0
+	.footer-top-right
+		width: calc(100% - 188px)
+		padding: 20px 20px 12px 20px
+	.footer-top-label
+		font-size: 16px
+	.footer-contact
+		margin: 0 0 10px 
+	.footer-phone
+		margin-right: 10px
+		font-size: 12px
+		line-height: 12px
+		.phone
+			font-size: 18px
+			letter-spacing: 0
+	.footer-bottom-inner
+		padding: 0 27px
 
 
-/*==========  Mobile First  ==========*/
+@media only screen and (max-width : 479px)
+	.container
+		padding: 0 10px
+	.section-header-link
+		display: none
+	.single-slider .slick-dots, 
+	.slider .slick-dots 
+		left: auto
+		right: 0
+		transform: translate(0,-32px)
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
+	/*header*/
+	.header-bottom
+		padding: 9px 0
+	.header-shops
+		display: none
+	.header-basket
+		display: none
+	.header-logo 
+		flex: 0 0 112px
+	.header-contact
+		margin: 0 0 0 auto
+	.header-phone
+		margin-right: 12px
+		.phone 
+			font: 700 14px/18px "PT Sans Narrow",sans-serif
+	.header-search 
+		margin: 5px 0 4px
+
+	.search-form a
+		display: none
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
+
+	/*review*/
+	.review
+		padding: 10px
+	.review-header
+		justify-content: flex-start
+	.review-shop-logo 
+		flex: 0 1 auto
+		margin: 0
+	.review-shop-info
+		width: 100%
+		margin-top: 7px
+		order: 2
+
+	/*footer*/
+	.footer-top-inner
+		padding: 0
+	.footer-top-left
+		width: 149px
+	.footer-top-right 
+		width: calc(100% - 149px)
+		font-size: 12px
+	.footer-contact
+		flex-wrap: wrap
+	.footer-phone
+		align-items: flex-start
+		width: 100%
+		margin: 0
+		.phone
+			font-size: 14px
+	.footer-bottom-inner 
+		font-size: 12px
 
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
 
