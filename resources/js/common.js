@@ -176,4 +176,21 @@ $(document).ready(function() {
 	$('.toggler_four').on('click' , function() {
 		$('.catalog-grid').addClass('catalog-grid-4')
 	})
+
+	 $('.product-slider').slick({
+	 	arrows: false,
+		fade: true,
+		asNavFor: '.product-slider-nav'
+	});
+	$('.product-slider-nav').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		asNavFor: '.product-slider',
+		dots: false,
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
+  		focusOnSelect: true
+	});
+	
+
 }); 

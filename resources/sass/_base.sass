@@ -7,7 +7,12 @@ body
 	color: #000000
 
 h1
-	margin: 35px 0
+	margin: 20px 0
+	font: 700 28px/34px $default-font
+	&.bordered
+		padding-left: 15px
+		border-left: 5px solid map-get($colors, main)
+		line-height: 25px
 
 h2
 	margin: 15px 0
@@ -273,6 +278,24 @@ textarea.form-text
 			font: 700 18px/30px $default-font
 			color: #ffffff
 
+/*check-list*/
+.check-list
+	margin: 3px 0
+	li
+		position: relative
+		margin-bottom: 5px
+		padding-left: 20px
+		&:before
+			box-sizing: border-box
+			position: absolute
+			top: 3px
+			left: 0
+			display: block
+			content: ''
+			width: 14px
+			height: 12px
+			background: url(../img/check-list.png) no-repeat center
+
 
 /*btn*/
 .btn
@@ -287,6 +310,25 @@ textarea.form-text
 		background: map-get($colors, mainLight)
 	&:active
 		background: map-get($colors, mainDark)
+.btn-outline
+	display: flex
+	align-items: center
+	padding: 9px 12px
+	background: #ffffff
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px
+	font: 400 16px/24px $default-font
+	color: map-get($colors, main)
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.1)
+	transition: all .3s
+	&:hover 
+		box-shadow: none
+	span
+		margin-right: auto
+		font-size: 0
+		line-height: 0
+	b
+		margin-left: 3px
 .btn_sm
 	padding: 6px 27px 7px 26px
 .btn_m
@@ -2442,6 +2484,196 @@ textarea.form-text
 			font: 700 14px/30px $default-font
 
 /*PRODUCT PAGE*/
+.product-wrapper
+	display: flex
+	padding: 20px 0	
+.product-left
+	width: 39.787%
+	padding-right: 11px
+.product-slider
+	margin-bottom: 87px
+.product-slide
+	&:before
+		padding-top: 137%
+.tumb-wrap
+	display: flex
+	justify-content: space-between
+	.block-descr-body
+		padding: 12px 15px
+.block-descr_nav
+	width: 53%
+	margin-bottom: 0!important
+.product-slider-nav
+	.card-img
+		&:before
+			padding-top: 107%
+	.slick-arrow 
+		width: 15px
+		height: 15px
+	.slick-prev 
+		left: -10px
+		background: url(../img/arrow-prev_sm.png) no-repeat center
+	.slick-next 
+		right: -10px
+		background: url(../img/arrow-next_sm.png) no-repeat center
+
+.block-descr_video
+	width: 44%
+
+
+.product-right
+	width: 60.213%
+.product-info
+	display: flex
+	align-items: flex-start
+	margin-bottom: 21px
+.product-info-left
+	width: calc(100% - 170px)
+	padding-right: 20px
+	.prod-info-item
+		display: flex
+		margin-bottom: 9px
+		padding-left: 10px
+	.prod-info-label
+		position: relative 
+		margin-right: 9px
+		font: 400 14px/20px $default-font
+		color: rgba(0,0,0,.55)
+		&:before
+			position: absolute
+			top: 6px
+			left: -10px
+			display: block
+			content: ''
+			width: 5px
+			height: 9px
+			background: url(../img/arrow-right.png) no-repeat center
+	.prod-info-text
+		font: 700 16px/20px $default-font
+		color: #000000
+.product-info-right
+	width: 170px
+	.btn-outline
+		width: 100%
+		margin-bottom: 7px
+		&:last-child
+			margin-bottom: 0
+/*online*/
+.online
+	.online-price
+		display: flex
+		align-self: flex-end
+		flex-direction: row
+		padding: 5px 0 17px
+		border-bottom: 1px solid map-get($colors, grey)
+	.prod-price
+		position: relative
+		width: 50%
+		align-items: center
+		padding: 7px 10px
+		.old-price
+			font: 700 24px/27px $default-font
+		.sale-number
+			padding: 0 5px
+			font: 700 19px/27px $default-font
+		.new-price
+			font: 700 28px/27px $default-font
+		.price-currency
+			font: 700 28px/27px $default-font
+	.prod-action 
+		position: static
+		width: 50%
+		display: block
+		margin-top: 0
+		padding: 0
+		background: transparent
+		border: none
+		border-top: none
+		border-radius: 0
+		.prod-action-inner
+			height: 50px
+			margin-bottom: 6px
+	.buy-now
+		display: inline-block
+		background-color: transparent
+		font: 700 16px/20px $default-font
+		color: map-get($colors, main)
+		text-decoration: underline
+.online-price-bottom
+	display: flex
+.online-price-bottom-left
+	width: 64%
+	font: 400 14px/20px $default-font
+	p
+		margin: 0
+.instock
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin: 8px 0!important
+	font: 700 16px/20px $default-font
+	color: map-get($colors, main)
+	.check-icon
+		display: block
+		width: 24px
+		height: 24px
+		margin-right: 8px
+		border: 1px solid map-get($colors, grey)
+		border-radius 3px
+.online-price-bottom-right
+	display: flex
+	flex-direction: column
+	width: 36%
+	padding: 7px 0 0
+	a
+		font: 400 14px/28px $default-font
+		color: #000000
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+/*offline*/
+.offline-shops
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 15px
+	padding-bottom: 9px
+	border-bottom: 1px solid map-get($colors, grey)
+.offline-shop
+	display: flex
+	align-items: center
+	margin: 5px 5px 5px 0
+	.metro-icon
+		display: block
+		width: 23px
+		height: 17px
+		margin-right: 5px
+.offline-shops-action
+	display: flex
+.offline-shops-action-item
+	width: 50%
+	text-align: center
+	font: 700 15px/20px $default-font
+	color: map-get($colors, red)
+	a
+		width: 100%
+	p
+		margin: 0
+	.offline-price
+		font-size: 22px
+/*cert*/
+.cert-wrap
+	display: flex
+	font: 400 14px/22px $default-font
+
+.block-descr-adv
+	width: calc(100% - 190px)
+	margin-bottom: 0!important
+.block-descr-cert
+	width: 170px
+	margin-left: 20px
+
+
+
 .block-descr
 	display: block
 	margin-bottom: 18px
@@ -2449,6 +2681,22 @@ textarea.form-text
 	border-radius: 5px
 	&:last-child
 		margin-bottom: 0
+.block-descr_center
+	.block-descr-header
+		text-align: center
+.block-descr_sm	
+	margin-bottom: 26px
+	.block-descr-header
+		margin-top: -12px
+	.block-descr-title
+		font-size: 16px
+.block-descr_lg	
+	margin-bottom: 26px
+	.block-descr-header
+		margin-top: -14px
+	.block-descr-title
+		font-size: 21px
+
 .block-descr-header
 	margin-top: -13px
 	padding: 0 12px
