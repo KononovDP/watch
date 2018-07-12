@@ -64,6 +64,11 @@ $(document).ready(function() {
 		})
 	};
 
+	if (windowWidth < 768) {
+		$('.catalog-grid').removeClassWild('catalog-grid-*');
+		$('.catalog-grid').addClass('catalog-grid-4');
+	}
+
 	$('.main-slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
