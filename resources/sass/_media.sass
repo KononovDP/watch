@@ -300,7 +300,16 @@
 	.method-descr p
 		margin: 0 0 16px 0
 
-
+	/*filter*/
+	.filter-section 
+		.filter 
+			padding: 6px 20px 17px 20px
+	.filter-list
+		max-width: 600px
+	.filter-item
+		width: 33.33%
+	.filter-char 
+		padding: 0 9px 0 25px
 
 @media only screen and (max-width : 767px)
 	h2
@@ -570,6 +579,20 @@
 	.method-descr
 		padding: 0 10px
 
+	/*filter*/
+	.filter-section 
+		h2
+			font-size: 24px
+		.filter 
+			padding: 6px 20px 21px 20px
+	.filter-item
+		width: 50%
+	.filter-char
+		margin-bottom: 20px
+	.filter-char-item
+		width: 50%
+
+
 @media only screen and (max-width : 479px)
 	.container
 		padding: 0 10px
@@ -766,6 +789,27 @@
 			width: 31%
 		.td:last-child 
 			display: none
+
+	/*filter*/
+	.filter-section
+		.filter-letter, .filter
+			padding: 8px 9px 14px 9px
+			.filter-header
+				flex-wrap: wrap
+				justify-content: flex-start
+				.filter-search
+					flex: 0 0 100%
+	.filter-item
+		width: 100%
+	.filter-char-item
+		width: 100%
+	.filter-char
+		padding: 10px
+		.btn
+			width: 100%
+			padding: 10px
+			text-align: center
+			font-size: 14px
 
 @media only screen and (max-width : 339px)
 	.header-logo
