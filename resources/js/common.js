@@ -55,6 +55,13 @@ $(document).ready(function() {
 	//
 	if (windowWidth <= 1024) {
 		$('.dropdown').append($('.header-nav .nav'));
+		$('.bunner-wrap-mobile').append($('.bunner'));
+		$('.filter-wrap-mobile').append($('.aside-filter-block'));
+
+		$('.filter-header').on('click' , function() {
+			$(this).closest('.aside-filter-block').find('.filter-body').slideToggle(300);
+			return false;
+		})
 	};
 
 	$('.main-slider').slick({

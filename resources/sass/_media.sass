@@ -9,6 +9,14 @@
 	.header-basket 
 		margin: 5px 0 5px 44px
 
+	/*catalog*/
+	.catalog-toolbar
+		align-items: flex-end
+		.select-wrap
+			flex-wrap: wrap
+		.select-label, .selectric-wrapper
+			width: 100%
+
 @media only screen and (max-width : 1024px)
 	.sticky
 		display: none
@@ -401,6 +409,75 @@
 	.block-descr-body
 		padding: 7px 17px 12px 17px
 
+	/*catalog*/
+	.filter-body
+		display: none
+	.catalog-preview 
+		display: none
+	.catalog-toolbar  .select-showing
+		display: none
+	.aside-filter-block
+		margin-bottom: 0
+		.filter-header
+			padding: 17px 20px 14px
+			text-align: center
+	.catalog-toolbar
+		align-items: center
+		.select-wrap
+			flex-wrap: nowrap
+			margin: 0 35px 0 auto
+		.select-label, .selectric-wrapper
+			width: auto
+	.catalog-toolbar_footer
+		justify-content: space-between
+
+	.catalog-grid-1 
+		.prod
+			align-items: flex-start
+		.prod-left
+			align-items: flex-start
+			width: 51.9%
+			padding: 0 16px
+		.prod-img
+			margin-top: 8px
+		.prod-info
+			margin-top: -3px
+			padding-left: 22px
+		.prod-info-item
+			margin-bottom: 0
+		.prod-info-char
+			margin: 11px 0 8px
+		.prod-right
+			align-self: flex-start
+			width: 48.1%
+			padding: 14px 20px 19px 20px
+		.prod-price
+			width: 100%
+			margin-bottom: 13px
+			padding: 0 16px
+		.prod-action
+			width: 100%
+			max-width: 252px
+			padding: 0 16px
+		.prod-meta 
+			margin-top: 30px
+			padding: 13px 24px 2px
+	
+	.catalog-grid-2
+		margin: 0 -10px
+		.catalog-col
+			padding: 0 10px 20px 10px
+		.prod-action 
+			.prod-fav, .prod-compare
+				flex: 0 0 44px
+		.prod-meta
+			flex-wrap: wrap
+			padding: 11px 13px
+
+	.catalog-grid-4 
+		.catalog-col
+			width: 33.33%
+			
 @media only screen and (max-width : 767px)
 	h2
 		font-size: 18px
@@ -785,6 +862,22 @@
 	.single-slider .slick-dots, .slider .slick-dots
 		transform: translate(-50%,-20px)
 
+	/*product*/
+	.catalog-view-toggle
+		display: none
+	.catalog-toolbar
+		justify-content: space-between
+		flex-wrap: wrap
+		.select-wrap
+			margin: 5px 35px 5px 0
+			.select-label
+				display: none
+		.catalog-info
+			margin: 0 30px 0 0
+	.catalog-grid-4 
+		.catalog-col
+			width: 50%
+
 @media only screen and (max-width : 479px)
 	.container
 		padding: 0 10px
@@ -1026,7 +1119,16 @@
 		padding: 0 0 10px 12px
 		font-size: 14px
 		line-height: 21px
-
+	/*product*/
+	.catalog-grid-4 
+		.catalog-col
+			width: 100%
+	.catalog-toolbar_footer 
+		flex-wrap: wrap
+		justify-content: flex-end
+		.catalog-info 
+			margin: 10px 10px
+			order: 2
 
 
 @media only screen and (max-width : 339px)
