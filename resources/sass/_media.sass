@@ -159,6 +159,91 @@
 		.copy
 			display: none
 
+	/*.breadcrumb*/
+	.breadcrumb-link
+		height: 45px
+	.breadcrumb-link:after, 
+	.breadcrumb-link:before 
+		top: -1px
+		right: 0
+		border-top: 25px solid transparent
+		border-bottom: 25px solid transparent
+
+	/*basket*/
+	.custom 
+		.custom-item
+			&:before
+				min-width: 19px
+	.basket-header 
+		padding: 14px 10px 14px 28px
+	.basket-body 
+		padding: 0 29px 20px 29px
+	.basket-prod
+		margin: 5px 0
+	.basket-prod-left
+		width: calc(100% - 260px)
+		padding: 12px 20px 7px 33px
+		.prod-img 
+			width: 98px
+			margin: 5px 0
+			&:before 
+				padding-top: 156.13%
+		.prod-info 
+			width: calc(100% - 98px)
+			padding: 0px 0 0 25px
+		.prod-info-char 
+			margin: 7px -3px 2px
+	.basket-prod-right 
+		width: 260px
+		padding: 19px 31px 23px 26px
+	.basket-prod-total 
+		padding: 10px 35px 10px 20px
+
+	.user-info 
+		max-width: 533px
+	.user-info-item 
+		.label 
+			width: 156px
+		.form-group 
+			width: calc(100% - 156px)
+		.checkbox 
+			margin: 8px 0 10px 0
+
+	.delivery-loc
+		max-width: 533px
+		.delivery-item 
+			.delivery-item-label
+				width: 156px
+			.form-group 
+				width: calc(100% - 156px)
+		p
+			margin: 6px 0
+
+	.delivery-table 
+		padding-bottom: 24px
+		.tr-head 
+			margin-bottom: 10px !important
+			.td 
+				padding: 4px 12px 6px
+		.td 
+			padding: 0 12px
+		.td:first-child 
+			width: 42%
+		.td:nth-child(2) 
+			width: 14%
+		.td:nth-child(3) 
+			width: 18%
+		.td:last-child 
+			width: 26%
+	.delivery-footer p 
+		margin: 14px 0 1px
+	
+	.address-item 
+		.address-label
+			width: 106px
+		.form-group 
+			width: calc(100% - 106px)
+
 
 @media only screen and (max-width : 767px)
 	h2
@@ -283,6 +368,95 @@
 	.footer-bottom-inner
 		padding: 0 27px
 
+	/*basket*/
+	.basket-prod
+		flex-wrap: wrap
+		margin: 10px 0
+	.basket-prod-left
+		width: 100%
+		padding: 19px 21px 5px 21px
+		border-right: none
+		.prod-img
+			margin: 0
+		.prod-info
+			padding: 0 0 0 16px
+		.prod-info-char 
+			margin: 16px -3px 0
+		.prod-info-link
+			display: none
+
+
+	.basket-prod-right
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		padding: 19px 21px 5px 20px
+		.basket-price
+			flex: 1 1 auto
+		.prod-info-link
+			margin-bottom: 22px
+			margin-left: 26px
+			font-size: 16px
+
+	.user-info
+		max-width: none
+	.user-info-item
+		flex-wrap: wrap
+		margin-bottom: 7px
+		.label
+			width: 100%
+			padding: 0
+			text-align: center
+			line-height: 23px
+		.form-group
+			width: 100%
+		.checkbox 
+			margin: 4px 0 3px 0
+
+	.delivery-loc
+		max-width: none
+		.delivery-item 
+			.delivery-item-label 
+				width: 171px
+			.form-group 
+				width: calc(100% - 171px)
+		p 
+			margin: 9px 0 19px
+
+
+
+
+	.delivery-table 
+		.td:first-child 
+			width: 50%
+		.td:nth-child(2) 
+			width: 20%
+		.td:nth-child(3) 
+			width: 30%
+		.td:last-child
+			display: none
+
+	.address-item
+		flex-wrap: wrap
+		margin-bottom: 2px
+		.address-label
+			width: 100%
+			padding: 5px 0
+			text-align: center
+		.form-group
+			width: 100%
+	.address-item textarea
+		height: 62px!important
+
+	.basket-cost 
+		.basket-action
+			flex-wrap: wrap
+			justify-content: flex-start
+			p
+				width: 100%
+				margin: 0
+				font-size: 12px
 
 @media only screen and (max-width : 479px)
 	.container
@@ -315,6 +489,8 @@
 
 	.search-form a
 		display: none
+	.catalog-dropdown-col
+		width: 100%
 
 
 
@@ -350,5 +526,80 @@
 	.footer-bottom-inner 
 		font-size: 12px
 
+	/*basket*/
+	.basket-body
+		padding: 0 29px 14px 29px
+	.basket-prod
+		margin: 10px -15px
+	.basket-prod-left
+		padding: 19px 7px 5px 9px
+		.prod-info 
+			padding: 0 0 0 8px
+	.basket-prod-right
+		flex-wrap: wrap
+		justify-content: flex-start
+		padding: 19px 21px 18px 20px
+		.basket-price 
+			flex: 0 0 100%
+			max-width: 182px
+		.prod-info-link 
+			margin: 3px 0
+	.basket-prod-total
+		margin: 0 -15px
+		padding: 10px 20px
+		justify-content: center
+
+	.user-info-item 
+		.checkboxmark
+			font-size: 12px
+
+	.delivery-loc
+		margin-bottom: 21px
+		.delivery-item
+			flex-wrap: wrap
+			margin-bottom: 4px
+			.delivery-item-label
+				justify-content: flex-start
+				width: 100%
+				padding: 3px 0
+				.radio
+					margin-left: 10px
+			.form-group
+				width: 100%
+		p
+			margin: 4px 0 5px
+			font-size: 12px
+
+	.delivery-table
+		width: auto
+		margin: 0 -10px
+		.tr-head 
+			.td 
+				padding: 4px 10px 6px
+				white-space: nowrap	
+				font-size: 14px	
+				font-weight: 400	
+		.td
+			padding: 4px 10px 6px
+		.td:first-child 
+			width: 50%
+		.td:nth-child(2) 
+			width: 25%
+			white-space: nowrap	
+		.td:nth-child(3) 
+			width: 25%
+			white-space: nowrap	
+	.delivery-footer
+		margin: 0 -10px
+		font-size: 12px
+		p 
+			margin: 9px 0 1px
+			line-height: 18px
+
+
+
+@media only screen and (max-width : 339px)
+	.header-logo
+		flex: 0 0 95px
 
 
