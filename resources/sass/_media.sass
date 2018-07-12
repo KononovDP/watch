@@ -14,7 +14,8 @@
 		display: none
 	.container_sm 
 		padding: 0 20px
-
+	.section
+		margin-bottom: 10px
 	/*header*/
 	.dropdown 
 		right: auto
@@ -244,12 +245,31 @@
 		.form-group 
 			width: calc(100% - 106px)
 
+	/*shops*/
+	.number-section 
+		h2 
+			padding-left: 26px
+		.number
+			width: 19px
+		.btn
+			padding: 4px 27px 4px 26px
+	.shop-contact 
+		width: 48.5%
+		padding: 0 10px
+	.shop-images
+		width: 51.5%
+	.shop-descr
+		padding: 0
+		p
+			margin: 5px 0 10px
+
+
 
 @media only screen and (max-width : 767px)
 	h2
 		font-size: 18px
 		&.bordered
-			padding-left: 5px
+			padding-left: 10px
 	
 	.section
 		margin-bottom: 10px
@@ -458,6 +478,23 @@
 				margin: 0
 				font-size: 12px
 
+	/*shops*/
+	.shop-about, .shop-map, .shop-section
+		h2
+			font-size: 24px
+			line-height: 26px
+	.shop-info
+		flex-wrap: wrap
+	.shop-contact
+		width: 100%
+		margin-bottom: 19px
+		padding: 0 15px
+	.shop-images
+		width: 100%
+		padding: 0 20px
+	.shop-descr
+		padding: 5px 20px
+
 @media only screen and (max-width : 479px)
 	.container
 		padding: 0 10px
@@ -596,6 +633,38 @@
 			margin: 9px 0 1px
 			line-height: 18px
 
+
+	/*shops*/
+	.number-section
+		.section-header
+			flex-wrap: wrap
+			position: static
+			h2
+				width: 100%
+				font-size: 24px
+			.btn
+				margin: -10px 0 8px 29px
+	.shop-contact 
+		margin-bottom: 15px
+		padding: 0 10px 0 15px
+	.shop-images
+		flex-wrap: wrap
+	.shop-images-col_sm
+		display: flex
+		justify-content: space-between
+		width: 100%
+		padding: 0
+		.shop-img
+			width: calc(50% - 2.5px)
+			margin-bottom: 5px !important
+			&:before
+				padding-top: 63.85%
+	.shop-images-col_lg
+		width: 100%
+		.shop-img:before
+			padding-top: 63.335%
+	.shop-descr
+		padding: 10px 20px
 
 
 @media only screen and (max-width : 339px)

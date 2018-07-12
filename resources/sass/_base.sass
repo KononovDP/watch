@@ -15,13 +15,22 @@ h1
 		line-height: 25px
 
 h2
+	position: relative
 	margin: 15px 0
 	font: 700 24px/36px $default-font
 	text-transform: uppercase
 	&.bordered
-		padding-left: 15px
-		border-left: 5px solid map-get($colors, main)
+		padding-left: 20px
 		line-height: 25px
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			content: ''
+			width: 5px
+			height: 25px
+			background: map-get($colors, main)
 	&.text-normal
 		text-transform: none
 h3
@@ -1629,19 +1638,21 @@ textarea.form-text
 	display: flex
 	width: 51.254%
 .shop-images-col_sm
-	width: 150px
+	width: 34.885%
 	padding-right: 5px
 	.shop-img
 		margin-bottom: 5px
+		border-radius: 5px
 		&:last-child
 			margin-bottom: 0
 		&:before
 			padding-top: 58%
 
 .shop-images-col_lg
-	width: calc(100% - 150px)
+	width: 65.115%
 	.shop-img
 		height: 100%
+		border-radius: 5px
 .shop-descr	
 	padding: 0 20px
 	font: 400 16px/21px $default-font
