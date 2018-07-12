@@ -37,7 +37,7 @@ $(document).ready(function() {
 	//tabs on JS
 	$('.tab-toggle').on('click' , function() {
 
-		$(this).closest('.tabs-header').find('.tab-toggle_active').removeClass('tab-toggle_active');
+		$(this).closest('.tabs-wrapper').find('.tab-toggle_active').removeClass('tab-toggle_active');
 		$(this).addClass('tab-toggle_active');
 
 		var dataTab = $(this).attr("data-tab");

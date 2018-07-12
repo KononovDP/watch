@@ -51,7 +51,7 @@
 	.aside 
 		width: 100%
 		margin-right: 0
-	.aside-widget
+	.aside-widget, .aside-block-filter
 		display: none
 	.aside-catalog-wrap
 		margin-bottom: 10px
@@ -310,6 +310,96 @@
 		width: 33.33%
 	.filter-char 
 		padding: 0 9px 0 25px
+
+	/*product*/
+	h1
+		margin: 15px 0 4px
+	.product-wrapper
+		padding: 20px 0 12px
+	.product-left 
+		width: 48.19%
+	.product-slider 
+		margin-top: 4px
+		margin-bottom: 74px
+	.block-descr_nav
+		width: 58%
+	.block-descr_video
+		width: 39%
+	.product-slider-nav 
+		.card-img:before
+			padding-top: 91%
+	.tumb-wrap .block-descr-body 
+		padding: 12px 9px 12px
+
+	.product-right 
+		width: 51.81%
+	.product-info-left
+		width: 100%
+	.product-info-right
+		display: none
+	.online 
+		margin-bottom: 18px
+		.block-descr-body 
+			padding: 10px 20px 10px 19px
+		.online-price
+			flex-wrap: wrap
+			padding-bottom: 15px
+		.prod-price
+			align-items: flex-start
+			width: auto
+			margin-bottom: 18px
+			padding: 0
+			text-align: right
+			.new-price
+				letter-spacing: 1px
+		.prod-action
+			width: 100%
+			.prod-action-inner
+				max-width: 225px
+			.prod-compare, .prod-fav
+				flex: 0 0 50px
+	.online-price-bottom
+		flex-wrap: wrap
+	.online-price-bottom-left
+		width: 100%
+	.online-price-bottom-right
+		width: 100%
+		padding-top: 6px
+		a
+			line-height: 24px
+	
+	.offline 
+		margin-bottom: 0
+		.block-descr-body 
+			padding: 10px 19px 5px 19px
+	.offline-shops
+		margin-bottom: 5px
+		padding-bottom: 11px 
+	.offline-shop
+		margin: 3px 5px 3px 0
+	.offline-shops-action
+		flex-wrap: wrap
+	.offline-shops-action-item 
+		width: 100%
+		margin-bottom: 9px
+		text-align: left
+		font: 700 15px/24px "PT Sans Narrow",sans-serif
+		.btn
+			max-width: 225px
+			text-align: center
+			font-size: 16px
+	.cert-wrap
+		display: none
+
+	.product-information 
+		.tab-toggle
+			padding: 10px 15px 7px 14px
+	.product-description-char 
+		width: 48.3%
+	.product-description-descr
+		width: 51.7%
+	.block-descr-body
+		padding: 7px 17px 12px 17px
 
 @media only screen and (max-width : 767px)
 	h2
@@ -593,16 +683,113 @@
 		width: 50%
 
 
+	/*product*/
+	h1
+		font-size: 24px
+		&.bordered
+			padding-left: 10px
+	h4 
+		margin: 12px 0 7px
+		font: 700 18px/21px "PT Sans Narrow",sans-serif
+
+	.product-wrapper
+		flex-wrap: wrap
+		padding: 8px 0 12px
+	.product-left
+		width: 100%
+		max-width: 311px
+		margin: 0 auto 16px
+		padding: 0
+	.product-slider
+		margin-bottom: 11px
+	.product-slide:before
+		padding-top: 142%
+	.block-descr_nav 
+		width: 55.31%
+	.block-descr_video 
+		width: 40.195%
+
+
+	.product-right
+		width: 100%
+	.product-info
+		margin-bottom: 19px
+	.online 
+		margin-bottom: 31px
+		.block-descr-header
+			text-align: center
+		.online-price
+			justify-content: center
+		.prod-action 
+			text-align: center
+			.prod-action-inner 
+				margin: 0 auto 7px
+
+	.online-price-bottom-right
+		display: none
+	.online-price-bottom
+		margin-bottom: 7px
+		text-align: center
+	.instock 
+		justify-content: center
+		margin: 10px 0 7px!important
+	.offline
+		.block-descr-header
+			text-align: center
+	.offline-shop
+		width: 100%
+		justify-content: center
+	.offline-shops-action-item
+		text-align: center
+		.btn
+			max-width: 310px
+
+	.product-information
+		border: none 
+		.tabs-wrapper
+			padding: 0
+			background: transparent
+		.tab-toggle 
+			margin-top: 2px
+			padding: 13px 15px 13px 14px
+			width: 100%
+			text-align: center
+			border-radius: 3px
+			background: url(../img/aside-header.png) repeat left top
+			color: #ffffff
+			&_active
+				border-radius: 3px 3px 0 0
+		.tab-content
+			order: 1
+			width: 100%
+			margin: 0
+			padding: 19px 53px 10px 38px
+			border: 1px solid map-get($colors, grey)
+			border-top: none
+			border-radius: 0 0 3px 3px
+	.product-description
+		flex-wrap: wrap
+	.product-description-char
+		width: 100% 
+		margin-bottom: 13px
+	.product-description-descr
+		width: 100%
+
+	.twin
+		padding: 0 15px 0 25px
+	.twin-text 
+		padding: 0 0 21px 29px
+	
+	.single-slider-wrap, .slider-wrap
+		padding-top: 10px
+	.single-slider .slick-dots, .slider .slick-dots
+		transform: translate(-50%,-20px)
+
 @media only screen and (max-width : 479px)
 	.container
 		padding: 0 10px
 	.section-header-link
 		display: none
-	.single-slider .slick-dots, 
-	.slider .slick-dots 
-		left: auto
-		right: 0
-		transform: translate(0,-32px)
 
 	/*header*/
 	.header-bottom
@@ -626,8 +813,6 @@
 		display: none
 	.catalog-dropdown-col
 		width: 100%
-
-
 
 	/*review*/
 	.review
@@ -810,6 +995,39 @@
 			padding: 10px
 			text-align: center
 			font-size: 14px
+
+	/*product*/
+	.section-header
+		padding: 0
+	h1
+		font-size: 18px
+		line-height: 33px
+	h4
+		margin: 7px 0 8px
+	.product-slide:before
+		padding-top: 148%
+	.block-descr_nav 
+		width: 57.72%
+	.block-descr_video 
+		width: 41.195%
+	.block-descr-body 
+		padding: 7px 8px 12px 8px
+	.block-descr_lg .block-descr-title
+		font-size: 18px
+	.online .block-descr-body 
+		padding: 12px 8px 10px 8px
+	.product-information .tab-content
+		padding: 16px 10px 10px 10px
+		font-size: 14px
+		line-height: 17px
+	.twin
+		padding: 0 0 0 8px
+	.twin-text 
+		padding: 0 0 10px 12px
+		font-size: 14px
+		line-height: 21px
+
+
 
 @media only screen and (max-width : 339px)
 	.header-logo
