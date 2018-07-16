@@ -320,6 +320,7 @@ textarea.form-text
 	display: inline-block
 	padding: 6px 10px 7px 10px
 	background: map-get($colors, main)
+	text-align: center
 	border-radius: 3px
 	font: 700 14px/22px $default-font
 	color: #ffffff
@@ -366,7 +367,7 @@ textarea.form-text
 	display: block
 
 .section
-	margin-bottom: 15px
+	margin-bottom: 10px
 	padding: 0
 	background: #ffffff
 	border: 1px solid map-get($colors, grey)
@@ -456,7 +457,7 @@ textarea.form-text
 	left: -50px
 	background: #ffffff url(../img/arrow-prev.png) no-repeat center
 	&:hover
-		background: #ffffff url(../img/arrow-prev-hover.png) no-repeat center
+		background: map-get($colors, main) url(../img/arrow-prev-hover.png) no-repeat center
 .slick-next 
 	right: -50px
 	background: #ffffff url(../img/arrow-next.png) no-repeat center
@@ -469,7 +470,7 @@ textarea.form-text
 .border
 	background: #ffffff
 	border: 1px solid map-get($colors, grey)
-	border-radius: 5px
+	border-radius: 4px
 
 /*PAGINATION*/
 .pagination
@@ -520,7 +521,7 @@ textarea.form-text
 
 .container
 	width: 100%
-	max-width: 1200px
+	//max-width: 1200px
 	margin: 0 auto
 	padding: 0 20px
 	&_sm
@@ -553,6 +554,7 @@ textarea.form-text
 	align-items: center
 .nav-item
 	margin-right: 28px
+	margin-bottom: 1px
 .nav-link
 	font: 700 15px/21px $default-font
 	color: #ffffff
@@ -642,9 +644,23 @@ textarea.form-text
 .header-logo
 	flex: 0 0 224px
 	margin-right: 10px
+	text-align: right
+	font: 700 20px/22px $default-font
+	color: #45a1ff	
+	img
+		position: relative
+		margin-bottom: -16px
+	span
+		position: relative
+		display: inline-block
+		padding: 0 5px 0 0
+		letter-spacing: 1.5px
+		text-shadow: 1px 1px 2px #000
+		z-index: 10
 .header-search
 	flex: 1 1 auto
-	margin: 2px 25px 0 0
+	max-width: 500px
+	margin: 2px auto 0
 .search-form
 	text-align: right
 	font-weight: 700
@@ -661,6 +677,14 @@ textarea.form-text
 		text-align: left
 		color: #ffffff
 		box-shadow: inset 0 0 3px 1px rgba(0,0,0,.5), 0 0 1px 0 rgba(255,255,255,.5)
+	.form-text::-webkit-input-placeholder
+		color: #ffffff
+	.form-text::-moz-placeholder         
+		color: #ffffff
+	.form-text:-moz-placeholder          
+		color: #ffffff
+	.form-text:-ms-input-placeholder     
+		color: #ffffff
 	button
 		position: absolute
 		right: 12px
@@ -679,12 +703,12 @@ textarea.form-text
 .header-contact
 	display: flex
 	align-items: flex-start
-	margin: 7px 0
+	margin: 7px auto
 .header-phone
 	display: flex
 	flex-direction: column
 	align-items: flex-end
-	margin-right: 19px
+	margin-right: 120px
 	font: 14px/17px $default-font
 	color: #ffffff
 	&:last-child
@@ -758,21 +782,22 @@ textarea.form-text
 /*ASIDE*/
 .aside
 	width: 290px
-	margin-right: 10px
+	margin-right: 20px
+	margin-left: -10px
 .aside-catalog-wrap
-	margin-bottom: 17px
-	background: url(../img/catalog-bg.png) repeat top center
-	border-radius: 3px
+	margin-bottom: 10px
+	background: url(../img/catalog-bg-new.png) repeat top center
+	border-radius: 0 3px 3px 0
 	box-shadow: 0 0 5px 0 rgba(0,0,0,.49) 
 	//overflow: hidden
 .aside-catalog-btn
 	position: relative	
 	padding: 16px 26px 14px 26px
-	border-radius: 3px
+	border-radius: 0 3px 3px 0
 	font: 700 18px/24px $default-font
 	text-transform: uppercase
 	cursor: pointer
-	box-shadow: 0 1px 5px 3px rgba(0,0,0,.2)
+	box-shadow: 0 1px 5px 3px rgba(0,0,0,.2), 0 6px 10px -6px #000
 	&:after
 		display: block
 		content: ''
@@ -796,7 +821,6 @@ textarea.form-text
 		margin-bottom: -1px
 .aside-catalog
 	position: relative
-	display: none
 .catalog-menu
 	padding: 18px 0
 	border-bottom: 1px solid #000000
@@ -847,18 +871,25 @@ textarea.form-text
 	left: 100%
 	display: none
 	min-height: 100%
-	padding: 10px
-	background: rgba(43,142,245,.46) 
+	padding: 4px
+	background: #237df9
+	border-radius: 0 3px 3px 0
 	z-index: 100
 .catalog-dropdown-inner
-	padding: 22px 2px 10px 40px
+	padding: 28px 44px 18px 0
 	background: #ffffff
-	border-radius: 5px
+	border-radius: 0 3px 3px 0
 .catalog-dropdown-row
 	display: flex
-	flex-wrap: wrap
 .catalog-dropdown-col
-	width: 275px
+	width: 280px
+	padding: 0 36px
+	border-right: 1px solid map-get($colors, grey)
+	&:nth-child(2n+2)
+		border-right: none
+	.btn
+		width: 100%
+		font-size: 16px
 .catalog-dropdown-block
 	margin-bottom: 10px
 .catalog-dropdown-title
@@ -897,9 +928,9 @@ textarea.form-text
 		text-decoration: underline
 
 .aside-block 
-	margin-bottom: 20px
+	margin-bottom: 10px
 	background: #ffffff
-	border-radius: 3px
+	border-radius:  0 3px 3px 0
 	box-shadow: 0 0 7px 0 rgba(45,47,49,.45)
 	overflow: hidden
 .aside-header
@@ -911,20 +942,25 @@ textarea.form-text
 .aside-body
 	padding: 15px 20px 15px 20px
 	background: #ffffff
-	
+.widget-yandex
+	a
+		display: block
+		width: 100%
+		img
+			width: 100%
 
 /*MAIN*/
 .main
-	width: calc(100% - 296px)
+	width: calc(100% - 300px)
 
 /*MAIN SLIDER*/
 .main-slider-wrap
 	position: relative
 	width: 100%
 	height: 305px
-	margin-bottom: 14px
+	margin-bottom: 10px
 	border: 1px solid map-get($colors, grey)
-	border-radius: 5px  
+	border-radius: 3px  
 	overflow: hidden
 .main-slider
 	width: 68.338%
@@ -987,7 +1023,7 @@ textarea.form-text
 
 /*ADVANTAGES*/
 .advantages
-	margin-bottom: 13px
+	margin-bottom: 10px
 	padding: 18px 55px
 .advantages-slide
 	display: flex
@@ -1010,11 +1046,11 @@ textarea.form-text
 	margin-bottom: 6px
 	transition: all .5s
 	overflow: hidden
-	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 	&:hover
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5)
+		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3)
 	&:active
-		box-shadow: 0 0 0 0 rgba(0,0,0,.5)
+		box-shadow: 0 0 0 0 rgba(0,0,0,.2)
 	&:last-child
 		margin-bottom: 0
 .brand-img
@@ -1040,11 +1076,11 @@ textarea.form-text
 	padding: 35px 20px 20px
 	text-align: center
 	transition: all .5s
-	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 	&:hover
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5)
+		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3)
 	&:active
-		box-shadow: 0 0 0 0 rgba(0,0,0,.5)
+		box-shadow: 0 0 0 0 rgba(0,0,0,.2) 
 .product-img
 	height: 157px
 	margin-bottom: 15px
@@ -1061,9 +1097,9 @@ textarea.form-text
 	display: block
 	min-width: 45px;
 	margin-bottom: 5px
-	padding: 2px 6px
-	background: map-get($colors, red)
-	border-radius: 5px
+	padding: 2px 6px 3px
+	background: linear-gradient(to bottom, #ff5338, #ee2303)
+	border-radius: 4px
 	text-align: center
 	font: 700 16px/20px $default-font
 	color: #ffffff
@@ -1160,6 +1196,17 @@ textarea.form-text
 .review-date
 	margin-bottom: 5px
 	font: 400 14px/24px $default-font
+
+/*ABOUT*/
+.about
+	.section-header
+		margin-bottom: -6px
+	.section-body 
+		padding: 0px 30px 9px 30px
+	p
+		margin: 0 0 25px 0
+
+
  
 /*FOOTER*/
 .footer
@@ -1189,6 +1236,20 @@ textarea.form-text
 	width: 213px
 	margin-right: 30px
 	align-self: center
+	font: 700 20px/22px $default-font
+	color: #45a1ff	
+	img
+		position: relative
+		margin-bottom: -16px
+	span
+		position: relative
+		display: block
+		width: 100%
+		padding: 0 5px 0 
+		text-align: right
+		letter-spacing: 1.5px
+		text-shadow: 1px 1px 2px #000
+		z-index: 10
 .footer-nav-block
 	flex: 1 1 auto
 .footer-nav-title
@@ -1240,6 +1301,7 @@ textarea.form-text
 	.footer-bottom-info
 		max-width: 620px
 		margin: 0 10px 0 0
+		color: rgba(255,255,255,.7 )
 	.copy
 		margin: 0
 		font: 400 16px/21px $default-font
@@ -1643,6 +1705,7 @@ textarea.form-text
 	border-radius: 5px
 	img
 		display: block
+		width: 100%
 
 .shop-info
 	display: flex
@@ -2790,6 +2853,7 @@ textarea.form-text
 			background: #ffffff
 			color: map-get($colors, main)
 	.tab-content
+		flex: 1 1 100%
 		order: 2
 		margin: 0 -19px
 		padding: 23px 19px 22px 19px

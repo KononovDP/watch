@@ -1,6 +1,34 @@
 @import "vars"
 
 
+@media only screen and (min-width : 1600px)
+	.slider-wrap
+		margin: 0 -7px
+	.slider
+		.slick-slide
+			padding: 0 7px
+	.brand
+		margin-bottom: 14px
+
+@media only screen and (min-width : 1366px)
+	.filter-item
+		width: 20%
+	.filter-char-item
+		width: 25%
+
+
+@media only screen and (max-width : 1599px)
+	.header-contact
+		margin: 7px 0
+	.header-phone
+		margin-right: 19px
+
+
+@media only screen and (max-width : 1365px)
+	.header-search
+		max-width: none
+		margin: 2px 25px 0 auto
+
 @media only screen and (max-width : 1199px)
 	.nav-item
 		margin-right: 20px
@@ -36,6 +64,8 @@
 	.header-bottom-inner
 		flex-wrap: wrap
 		min-height: inherit
+	.header-logo
+		font-size: 16px
 	.header-search 
 		flex: 1 0 100%
 		margin: 5px 0 8px
@@ -59,12 +89,18 @@
 	.aside 
 		width: 100%
 		margin-right: 0
+		margin-left: 0
+	.aside-catalog-wrap
+		border-radius: 3px
+	.aside-catalog
+		display: none
 	.aside-widget, .aside-block-filter
 		display: none
 	.aside-catalog-wrap
 		margin-bottom: 10px
 	.aside-catalog-btn
 		text-align: center
+		border-radius: 3px
 	.catalog-item
 		flex-wrap: wrap
 		padding: 5px 20px
@@ -78,10 +114,15 @@
 		margin: 10px 0
 		padding: 0
 		background-color: transparent
+		border-radius: 3px
 	.catalog-dropdown-inner
-		padding: 10px 20px
+		padding: 10px 0
+		border-radius: 3px
 	.catalog-dropdown-col
 		width: 50%
+		padding: 0 20px
+	.aside-block
+		border-radius: 3px
 
 	.main
 		width: 100%
@@ -154,6 +195,7 @@
 	.footer-logo 
 		margin-right: 20px
 		margin-top: 53px
+		font-size: 16px
 	
 	.footer-nav-block
 		display: none
@@ -490,6 +532,7 @@
 		font-size: 14px
 	.section-body
 		padding: 0 10px 10px 10px
+
 	/*header*/
 	.header-top-inner
 		height: 41px
@@ -499,6 +542,9 @@
 		padding: 15px 20px 10px 12px
 	.header-logo
 		flex: 0 0 146px
+		font-size: 12px
+		span
+			padding: 0
 	.header-shops
 		margin-left: auto
 	.header-contact
@@ -541,8 +587,12 @@
 		display: none
 	
 	/*review*/
+	.reviews
+		.slick-dots
+			margin-left: 45px
 	.review 
 		padding: 10px 16px
+
 
 	.review-header
 		flex-wrap: wrap
@@ -584,6 +634,9 @@
 		padding: 0 10px
 	.footer-logo 
 		margin: 0
+		font-size: 12px
+		span
+			padding: 0
 	.footer-top-right
 		width: calc(100% - 188px)
 		padding: 20px 20px 12px 20px
@@ -857,11 +910,6 @@
 	.twin-text 
 		padding: 0 0 21px 29px
 	
-	.single-slider-wrap, .slider-wrap
-		padding-top: 10px
-	.single-slider .slick-dots, .slider .slick-dots
-		transform: translate(-50%,-20px)
-
 	/*product*/
 	.catalog-view-toggle
 		display: none
@@ -884,6 +932,16 @@
 	.section-header-link
 		display: none
 
+	.single-slider .slick-dots, 
+	.slider .slick-dots
+		left: 100%
+		transform: translate(-100%,-32px)
+
+	.reviews
+		.slick-dots
+			margin-left: 0
+
+
 	/*header*/
 	.header-bottom
 		padding: 9px 0
@@ -893,6 +951,7 @@
 		display: none
 	.header-logo 
 		flex: 0 0 112px
+		font-size: 10px
 	.header-contact
 		margin: 0 0 0 auto
 	.header-phone
@@ -904,8 +963,11 @@
 
 	.search-form a
 		display: none
+	.catalog-dropdown-row
+		flex-wrap: wrap
 	.catalog-dropdown-col
 		width: 100%
+		border-right: none
 
 	/*review*/
 	.review
