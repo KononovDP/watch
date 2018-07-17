@@ -1713,6 +1713,12 @@ textarea.form-text
 	text-align: right
 
 /*SHOP*/
+.shop-section
+	.section-header
+		h2
+			margin: 11px 0 8px
+		.btn
+			margin-top: 3px
 .shop-about
 	font: 400 14px/18px $default-font
 	p
@@ -1720,8 +1726,16 @@ textarea.form-text
 		&:last-child
 			margin-bottom: 0
 .map-img
-	border-radius: 5px
-	img
+	position: relative
+	width: 100%
+	height: 313px
+	border-radius: 4px
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
 		display: block
 		width: 100%
 
