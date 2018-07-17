@@ -104,8 +104,7 @@ b
 	color: map-get($colors, red)
 
 .text-gradient_secondary
-	background: -webkit-linear-gradient(top, #fff2d5, #ffb52b)
-	background: linear-gradient(top, #fff2d5, #ffb52b)
+	background: linear-gradient(top, #ffdfa4, #ffb325)
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 	color: map-get($colors, secondary)
@@ -746,7 +745,7 @@ textarea.form-text
 	position: fixed
 	left: 100%
 	top: 20%
-	transform: translateX(-60px)
+	transform: translateX(-59px)
 	z-index: 110
 .sticky-item
 	display: flex
@@ -942,6 +941,10 @@ textarea.form-text
 .aside-body
 	padding: 15px 20px 15px 20px
 	background: #ffffff
+.aside-widget
+	.for-img
+		margin-bottom: 13px
+		border: 1px solid map-get($colors, grey)
 .widget-yandex
 	a
 		display: block
@@ -959,12 +962,13 @@ textarea.form-text
 	width: 100%
 	height: 305px
 	margin-bottom: 10px
-	border: 1px solid map-get($colors, grey)
-	border-radius: 3px  
 	overflow: hidden
 .main-slider
 	width: 68.338%
 	height: 100%
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px 0 0 3px 
+	border-right: none
 	.slick-slide>div
 		display: flex
 .main-slide
@@ -987,20 +991,24 @@ textarea.form-text
 .main-slider-nav
 	position: absolute
 	top: 0
+	bottom: -.5px
 	right: 0
 	width: calc(31.662% + 8px) 
-	height: 100%
-	margin-top: -1px
+	border: 1px solid map-get($colors, grey)
+	border-radius: 0 3px 3px 0
+	border-left: none
+	overflow: hidden
 	.slick-list, .slick-track 
 		height: 100%!important
 	.slick-slide
+		position: relative
 		height: 25%
 		display: flex
 		align-items: center
 		margin-left: 8px
 		padding: 10px 25px 
 		background: #ffffff
-		border-top: 1px solid map-get($colors, grey)
+		border-bottom: 1px solid map-get($colors, grey)
 		font: 700 16px/24px $default-font
 		color: #434343
 		cursor: pointer
@@ -1361,11 +1369,11 @@ textarea.form-text
 	margin-bottom: 18px
 	overflow: hidden
 	transition: all .5s
-	box-shadow: 0 0 2px 0 rgba(0,0,0,.5)
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 	&:hover
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.5)
+		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3)
 	&:active
-		box-shadow: 0 0 0 0 rgba(0,0,0,.5)
+		box-shadow: 0 0 0 0 rgba(0,0,0,.2)
 .sale-header
 	padding: 6px 10px
 	background: map-get($colors, main)
@@ -2637,6 +2645,13 @@ textarea.form-text
 
 .block-descr_video
 	width: 44%
+	.block-descr-body 
+		padding: 12px 15px
+		height: calc(100% - 24px)
+		display: flex
+		align-items: center
+		justify-content: center
+
 
 
 .product-right

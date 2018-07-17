@@ -16,13 +16,22 @@
 	.filter-char-item
 		width: 25%
 
+	.product-slide
+		height: 442px
+		&:before
+			padding-top: 0
+
+	.catalog-grid-2 
+		.prod-img
+			height: 208px
+			&:before
+				padding-top: 0
 
 @media only screen and (max-width : 1599px)
 	.header-contact
 		margin: 7px 0
 	.header-phone
 		margin-right: 19px
-
 
 @media only screen and (max-width : 1365px)
 	.header-search
@@ -150,11 +159,9 @@
 		right: -38px
 
 	/*brand*/
-	.brand-img
-		width: 90px
 	.brand-text 
-		width: calc(100% - 90px)
 		padding: 8px 10px 10px 12px
+		text-align: center
 
 	/*review*/
 	.single-slider-wrap
@@ -592,6 +599,14 @@
 	.reviews
 		.slick-dots
 			margin-left: 45px
+	.slider-acc
+		.slick-dots
+			left: 100%
+			transform: translate(-100%,-32px)
+	.slider-int
+		.slick-dots
+			left: 100%
+			transform: translate(-100%,-32px)
 	.review 
 		padding: 10px 16px
 
@@ -1193,7 +1208,6 @@
 		.catalog-info 
 			margin: 10px 10px
 			order: 2
-
 
 @media only screen and (max-width : 339px)
 	.header-logo
