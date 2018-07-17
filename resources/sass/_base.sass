@@ -64,7 +64,7 @@ b
 	font-weight: 700
 
 .hidden
-	display: none!important
+	display: none
 
 .clearfix
 	&:after, &:before
@@ -1778,7 +1778,10 @@ textarea.form-text
 	font-weight: 700
 
 /*CATALOG PAGE*/
+.filter-header
+	cursor: pointer
 .filter-body
+	display: block
 	padding: 0
 .filter-label
 	margin-bottom: 13px
@@ -1796,9 +1799,10 @@ textarea.form-text
 	align-items: center
 	justify-content: flex-start
 	margin: 2px 0
-	padding: 0px 6px 1px 8px
+	padding: 2px 6px 3px 7px
 	background: map-get($colors, main)
 	border-radius: 3px
+	font: 700 16px/20px $default-font
 	color: #ffffff	
 	transition: all .3s
 	&:hover
@@ -1806,7 +1810,7 @@ textarea.form-text
 	&:active
 		background: map-get($colors, mainDark)
 	span
-		margin: 0 0px 0 10px
+		margin: 0 0px 0 12px
 		font-size: 0
 		line-height: 0
 		cursor: pointer
@@ -1903,14 +1907,16 @@ textarea.form-text
 		margin: 2px 18px 2px 0 
 	.cat-label
 		display: inline-block
+		min-width: 45px
 		margin-right: 6px
-		padding: 0 10px
-		background: map-get($colors, red)
-		border-radius: 3px
+		padding: 0 5px
+		background: linear-gradient(to bottom,#ff5338,#ee2303)
+		border-radius: 4px
+		text-align: center
 		font: 700 16px/25px $default-font
 		color: #ffffff
 	.cat-text
-		font: 400 16px/20px $default-font
+		font: 700 16px/20px $default-font
 		color: #232b4e
 		text-decoration: underline
 		&:hover
@@ -1946,6 +1952,8 @@ textarea.form-text
 		display: flex
 		align-items: center
 		margin: 0 10px 
+	.label 
+		font: 400 14px/35px "PT Sans Narrow",sans-serif
 	.select-label
 		margin-right: 10px
 
@@ -1964,28 +1972,38 @@ textarea.form-text
 	&:hover
 		transform: scale(1.05)
 		box-shadow: 0 5px 5px -2px map-get($colors, grey)
-.toggler_active
-	background: map-get($colors, main)
-	border-color: map-get($colors, main) 
+.toggler_active 
 	cursor: default
 	&:hover
 		transform: scale(1)
 		box-shadow: none
 .toggler_one
 	background: #ffffff url(../img/toggler-one.png) no-repeat center
-.toggler_one.toggler_active
+.toggler_one:active
+	border-color: map-get($colors, main)
 	background: map-get($colors, main) url(../img/toggler-one-active.png) no-repeat center
+.toggler_one.toggler_active
+	background: #ffffff url(../img/toggler-one-activate.png) no-repeat center
+
 .toggler_two
 	background: #ffffff url(../img/toggler-two.png) no-repeat center
-.toggler_two.toggler_active
+.toggler_two:active
+	border-color: map-get($colors, main)
 	background: map-get($colors, main) url(../img/toggler-two-active.png) no-repeat center
+.toggler_two.toggler_active
+	background: #ffffff url(../img/toggler-two-activate.png) no-repeat center
+
 .toggler_four
 	background: #ffffff url(../img/toggler-four.png) no-repeat center
-.toggler_four.toggler_active
+.toggler_four:active
+	border-color: map-get($colors, main)
 	background: map-get($colors, main) url(../img/toggler-four-active.png) no-repeat center
+.toggler_four.toggler_active
+	background: #ffffff url(../img/toggler-four-activate.png) no-repeat center
 
-.catalog-toolbar_footer
+.catalog-toolbar.catalog-toolbar_footer
 	justify-content: flex-end
+	align-items: center
 .catalog-info
 	margin: 0 30px
 	font: 400 16px/20px $default-font
@@ -2008,8 +2026,10 @@ textarea.form-text
 	border: 1px solid map-get($colors, grey)
 	border-radius: 5px
 	&:hover
+		box-shadow: 0px 3px 8px 0px rgba(0,0,0,.3)
 		.prod-action
 			display: block
+			box-shadow: 0px 3px 8px -1px rgba(0,0,0,.3)
 		.prod-prev
 			opacity: 1
 
@@ -2067,8 +2087,8 @@ textarea.form-text
 		display: inline-block
 		margin-left: 5px
 		padding: 0 4px
-		background: map-get($colors, red)
-		border-radius: 3px
+		background: linear-gradient(to bottom,#ff5338,#ee2303)
+		border-radius: 4px
 		font: 700 14px/20px $default-font
 		color: #ffffff
 	.new-price
@@ -2172,6 +2192,7 @@ textarea.form-text
 		width: 50%
 	.prod-left
 		display: flex
+		align-items: flex-start
 		padding: 18px 0 9px
 	.prod-title
 		display: none
@@ -2180,6 +2201,10 @@ textarea.form-text
 		max-width: none
 		margin: 0
 		padding: 0 30px
+		&:before
+			padding-top: 143%
+		.prod-prev
+			bottom: 15px
 	.prod-info
 		display: block
 		width: 52%
@@ -2260,6 +2285,8 @@ textarea.form-text
 		display: flex
 		width: 100%
 		padding: 9px 13px
+		.prod-meta-icon
+			margin-right: 7px
 		p
 			margin-right: 5px
 		p:last-child
@@ -2271,18 +2298,33 @@ textarea.form-text
 	.catalog-col
 		width: 100%
 	.prod
+		position: relative
 		flex-direction: row
 		padding: 20px 0
+		&:after
+			position: absolute
+			top: 20px
+			bottom: 20px
+			left: 51%
+			display: block
+			content: ''
+			width: 1px
+			background: map-get($colors, grey)
+		&:hover
+			.prod-action
+				box-shadow: none
 	.prod-left
 		display: flex
+		align-items: flex-start
 		width: 51%
 		padding: 3px 30px
-		border-right: 1px solid map-get($colors, grey)
 	.prod-title
 		display: none
 	.prod-img
 		width: 156px
 		margin: 0
+		.prod-prev
+			bottom: 22px
 	.prod-info
 		display: block
 		width: calc(100% - 156px)
@@ -2352,6 +2394,8 @@ textarea.form-text
 		border: none
 		border-top: none
 		border-radius: 0
+		.prod-action-inner
+			margin-bottom: 2px
 	.buy-now
 		display: inline-block
 		background-color: transparentq
@@ -2361,8 +2405,9 @@ textarea.form-text
 
 	.prod-meta
 		width: 100%
-		margin-top: 44px
+		margin-top: 42px
 		padding: 13px 7px 2px
+		text-align: left
 		border-top: 1px solid map-get($colors, grey)
 		p
 			margin: 3px 0

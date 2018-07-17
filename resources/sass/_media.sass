@@ -485,8 +485,12 @@
 		justify-content: space-between
 
 	.catalog-grid-1 
+		.catalog-col
+			padding-bottom: 5px
 		.prod
 			align-items: flex-start
+			&:after
+				left: 51.9%
 		.prod-left
 			align-items: flex-start
 			width: 51.9%
@@ -934,6 +938,8 @@
 		padding: 0 0 21px 29px
 	
 	/*product*/
+	.aside-filter-block .filter-header
+		padding: 10px 26px 8px 26px
 	.catalog-view-toggle
 		display: none
 	.catalog-toolbar
@@ -948,6 +954,15 @@
 	.catalog-grid-4 
 		.catalog-col
 			width: 50%
+	.catalog-toolbar_footer 
+		flex-wrap: wrap
+		justify-content: flex-end
+		.catalog-info 
+			width: 100%
+			text-align: right
+			margin: 10px 10px
+			order: 2
+
 
 @media only screen and (max-width : 479px)
 	.container
@@ -1213,13 +1228,7 @@
 	.catalog-grid-4 
 		.catalog-col
 			width: 100%
-	.catalog-toolbar_footer 
-		flex-wrap: wrap
-		justify-content: flex-end
-		.catalog-info 
-			margin: 10px 10px
-			order: 2
-
+	
 @media only screen and (max-width : 339px)
 	.header-logo
 		flex: 0 0 95px
