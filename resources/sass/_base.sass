@@ -412,7 +412,7 @@ textarea.form-text
 	.slick-list 
 		 padding: 2px
 	.slick-slide
-		padding: 0 3px
+		padding: 2px 3px 5px
 .slider, .single-slider
 	.slick-dots
 		position: absolute
@@ -464,7 +464,9 @@ textarea.form-text
 		background: map-get($colors, main) url(../img/arrow-next-hover.png) no-repeat center
 
 .single-slider-wrap
-	margin: 0 5px
+	margin: 0 -5px
+	.slick-slide
+		padding: 5px
 
 .border
 	background: #ffffff
@@ -648,7 +650,7 @@ textarea.form-text
 	color: #45a1ff	
 	img
 		position: relative
-		margin-bottom: -16px
+		margin-bottom: -9px
 	span
 		position: relative
 		display: inline-block
@@ -962,13 +964,12 @@ textarea.form-text
 	width: 100%
 	height: 305px
 	margin-bottom: 10px
+	border: 1px solid map-get($colors, grey)
+	border-radius: 3px
 	overflow: hidden
 .main-slider
 	width: 68.338%
 	height: 100%
-	border: 1px solid map-get($colors, grey)
-	border-radius: 3px 0 0 3px 
-	border-right: none
 	.slick-slide>div
 		display: flex
 .main-slide
@@ -991,12 +992,9 @@ textarea.form-text
 .main-slider-nav
 	position: absolute
 	top: 0
-	bottom: -.5px
+	bottom: -1px
 	right: 0
 	width: calc(31.662% + 8px) 
-	border: 1px solid map-get($colors, grey)
-	border-radius: 0 3px 3px 0
-	border-left: none
 	overflow: hidden
 	.slick-list, .slick-track 
 		height: 100%!important
@@ -1052,11 +1050,11 @@ textarea.form-text
 .brand
 	display: flex
 	margin-bottom: 6px
-	transition: all .5s
+	transition: all .3s
 	overflow: hidden
 	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 	&:hover
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3)
+		box-shadow: 0px 3px 8px 0px rgba(0,0,0,.3)
 	&:active
 		box-shadow: 0 0 0 0 rgba(0,0,0,.2)
 	&:last-child
@@ -1083,10 +1081,10 @@ textarea.form-text
 	position: relative
 	padding: 35px 20px 20px
 	text-align: center
-	transition: all .5s
+	transition: all .3s
 	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 	&:hover
-		box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3)
+		box-shadow: 0px 3px 8px 0px rgba(0,0,0,.3)
 	&:active
 		box-shadow: 0 0 0 0 rgba(0,0,0,.2) 
 .product-img
@@ -1136,6 +1134,7 @@ textarea.form-text
 /*REVIEW*/
 .review
 	padding: 10px 12px
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 .review-header
 	display: flex
 	align-items: center
