@@ -1427,9 +1427,10 @@ textarea.form-text
 	align-items: flex-start
 	font: 400 14px/20px $default-font
 .payment-descr
+	width: calc(100% - 145px)
 	margin-top: -4px
 .payment-action
-	flex: 1 0 90px
+	width: 110px
 	margin-left: 35px
 
 /*FILTER PAGE*/
@@ -1562,7 +1563,7 @@ textarea.form-text
 		color: map-get($colors, main)
 	.form-text:focus:-moz-placeholder          
 		color: map-get($colors, main)
-	.form-text:focus:-ms-input-placeholder     
+	.form-text:focus::-ms-input-placeholder  
 		color: map-get($colors, main)
 	label
 		display: block
