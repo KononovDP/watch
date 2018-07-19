@@ -201,10 +201,11 @@ textarea.form-text
 	box-shadow: none
 	li 
 		padding: 0 15px
-		font: 700 14px/30px $default-font
+		font: 400 14px/30px $default-font
 		color: #000000	
 	li.highlighted 
 		background: #ffffff
+		font-weight: 700
 		color: map-get($colors, main)
 	li:hover 
 		background: map-get($colors, main)
@@ -1177,8 +1178,8 @@ textarea.form-text
 	&:after
 		position: absolute
 		right: 0
-		top: 20px
-		bottom: 20px
+		top: 0
+		height: 100%
 		display: block
 		content: ''
 		width: 1px
@@ -1357,7 +1358,7 @@ textarea.form-text
 .sale-list
 	display: flex
 	flex-wrap: wrap
-	margin: 0 -10px -18px
+	margin: -5px -10px -18px
 .sale-col
 	width: 33.33%
 	padding: 0 10px 18px
@@ -1388,7 +1389,7 @@ textarea.form-text
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	padding: 10px 32px
+	padding: 10px 30px
 .sale-title
 	text-align: center
 	font: 700 16px/18px $default-font
@@ -1465,7 +1466,16 @@ textarea.form-text
 			padding: 0 46px 0 10px
 			border: 1px solid map-get($colors, main)
 			border-radius: 5px
-			font-size: 12px
+			font-size: 14px
+			color: #3a3f4f
+		.form-text::-webkit-input-placeholder
+			color: #3a3f4f
+		.form-text::-moz-placeholder
+			color: #3a3f4f
+		.form-text:-moz-placeholder
+			color: #3a3f4f
+		.form-text:-ms-input-placeholder     
+			color: #3a3f4f
 		button
 			position: absolute
 			top: 0
@@ -1542,8 +1552,16 @@ textarea.form-text
 		font: 700 16px/20px $default-font
 		color: map-get($colors, grey)
 		&:focus
-			border-color: map-get($colors, main)
+			border: 2px solid map-get($colors, main)
 			color: map-get($colors, main)
+	.form-text:focus::-webkit-input-placeholder
+		color: map-get($colors, main)
+	.form-text:focus::-moz-placeholder         
+		color: map-get($colors, main)
+	.form-text:focus:-moz-placeholder          
+		color: map-get($colors, main)
+	.form-text:focus:-ms-input-placeholder     
+		color: map-get($colors, main)
 	label
 		display: block
 		font: 400 16px/20px $default-font
@@ -1654,6 +1672,7 @@ textarea.form-text
 .method-block
 	position: relative
 	margin-bottom: 28px
+	margin-top: 5px
 	padding: 7px 0
 	&:last-child
 		margin-bottom: 0
@@ -1689,12 +1708,15 @@ textarea.form-text
 		margin-bottom: 4px
 		font: 400 16px/30px $default-font
 		color: #000000
+	.tr-head .td
+		font-size: 16px!important
 	.td
 		padding: 0 20px
 		&:first-child
 			width: 36%
 		&:nth-child(2)
 			width: 18%
+			font-size: 18px
 		&:nth-child(3)
 			width: 22%
 		&:last-child
@@ -1707,7 +1729,7 @@ textarea.form-text
 	padding: 0 20px
 	font: 400 14px/17px $default-font
 	p
-		margin: 0 0 15px
+		margin: 0 0 8px
 .method-action 
 	padding: 0 20px
 	text-align: right
@@ -1744,7 +1766,7 @@ textarea.form-text
 	align-items: flex-start
 .shop-contact
 	width: 48.746%
-	padding: 0 20px
+	padding: 0 18px
 .contact-list
 	max-width: 300px
 .contact-item
@@ -1797,7 +1819,13 @@ textarea.form-text
 
 /*CATALOG PAGE*/
 .filter-header
+	display: flex
+	align-items: center
+	justify-content: flex-start
 	cursor: pointer
+	span
+		display: none
+		margin-right: 10px
 .filter-body
 	display: block
 	padding: 0
@@ -1828,7 +1856,7 @@ textarea.form-text
 	&:active
 		background: map-get($colors, mainDark)
 	span
-		margin: 0 0px 0 12px
+		margin: 2px 0px 0 12px
 		font-size: 0
 		line-height: 0
 		cursor: pointer
@@ -1943,15 +1971,18 @@ textarea.form-text
 	.tabs-header
 		display: flex
 		flex-wrap: wrap
-		padding: 6px 0
+		padding: 8px 0
 		a
 			display: inline-block
 			margin-right: 24px
-			font: 700 16px/20px $default-font
+			font: 700 16px/16px $default-font
 			color: #232b4e
-			text-decoration: underline
+			border-bottom: 1px solid #000000
 			&:hover
-				text-decoration: none
+				border: none
+		.tab-toggle
+			border-bottom: 1px dashed #000000
+			text-decoration: none
 	.tab-content
 		padding: 8px 0
 		font: 400 16px/20px $default-font
@@ -1974,7 +2005,14 @@ textarea.form-text
 		font: 400 14px/35px "PT Sans Narrow",sans-serif
 	.select-label
 		margin-right: 10px
-
+	.select-sorting 
+		.selectric-wrapper
+			width: 155px
+	.select-showing
+		.selectric-wrapper
+			width: 60px
+		.label 
+			margin: 0 25px 0 10px
 .catalog-view-toggle
 	display: flex       
 .toggler
@@ -2431,6 +2469,8 @@ textarea.form-text
 			margin: 3px 0
 		p:last-child
 			display: block
+	.prod-meta-icon
+		margin-left: 6px
 
 
 /*catalog 4*/
@@ -2816,7 +2856,7 @@ textarea.form-text
 		text-decoration: underline
 .online-price-bottom
 	display: flex
-	margin-bottom: -7px
+	margin: 0 -3px -7px -3px
 .online-price-bottom-left
 	width: 64%
 	font: 400 14px/20px $default-font
@@ -2826,7 +2866,7 @@ textarea.form-text
 	display: flex
 	justify-content: flex-start
 	align-items: center
-	margin: 8px 0!important
+	margin: 10px 0 6px!important
 	font: 700 16px/20px $default-font
 	color: map-get($colors, main)
 	.check-icon
@@ -2835,7 +2875,7 @@ textarea.form-text
 		height: 24px
 		margin-right: 8px
 		border: 1px solid map-get($colors, grey)
-		border-radius 3px
+		border-radius: 2px
 .online-price-bottom-right
 	display: flex
 	flex-direction: column

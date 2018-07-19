@@ -299,6 +299,8 @@
 			width: 26%
 	.delivery-footer p 
 		margin: 14px 0 1px
+	.calc-footer
+		margin-bottom: 3px
 	
 	.address-item 
 		.address-label
@@ -422,7 +424,7 @@
 				flex: 0 0 50px
 	.online-price-bottom
 		flex-wrap: wrap
-		margin-bottom: 0
+		margin: 0
 	.online-price-bottom-left
 		width: 100%
 	.online-price-bottom-right
@@ -466,6 +468,10 @@
 		padding: 7px 17px 12px 17px
 
 	/*catalog*/
+	.aside-filter-block .filter-header 
+		justify-content: center
+		span
+			display: block
 	.aside-filter-block .filter-body
 		display: none
 	.catalog-preview 
@@ -741,13 +747,37 @@
 
 	.delivery-table 
 		.td:first-child 
-			width: 50%
+			width: 46%
 		.td:nth-child(2) 
 			width: 20%
 		.td:nth-child(3) 
-			width: 30%
+			width: 34%
 		.td:last-child
 			display: none
+	.delivery-table 
+		padding-bottom: 0
+		.tr
+			align-items: flex-start
+			margin-bottom: 15px
+			font: 400 14px/15px "PT Sans Narrow",sans-serif
+		.tr-head
+			align-items: center
+			margin-bottom: 15px!important
+			font-size: 16px
+		.tr-header
+			margin-bottom: 11px
+			font-size: 16px
+		.td:nth-child(2)
+			font-size: 14px
+	.delivery-calc
+		.calc-footer
+			margin-bottom: 6px
+			padding: 0 18px
+			p
+				margin: 6px 0 2px
+
+			a
+				font-size: 14px
 
 	.address-item
 		flex-wrap: wrap
@@ -779,6 +809,8 @@
 		h2
 			font-size: 24px
 			line-height: 26px
+			.number
+				top: -2px
 	.shop-info
 		flex-wrap: wrap
 	.shop-contact
@@ -957,6 +989,8 @@
 				display: none
 		.catalog-info
 			margin: 0 30px 0 0
+	.catalog-grid
+		margin-bottom: -10px
 	.catalog-grid-4 
 		.catalog-col
 			width: 50%
@@ -1181,6 +1215,33 @@
 			width: 31%
 		.td:last-child 
 			display: none
+	.delivery-calc
+		.delivery-table
+			margin: 0
+			.td:first-child 
+				width: 46%
+			.td:nth-child(2) 
+				width: 23%
+			.td:nth-child(3) 
+				width: 31%
+			.tr
+				margin-bottom: 5px
+			.tr-head
+				margin-bottom: 10px !important
+			.tr-header
+				margin-bottom: 1px
+		.calc-footer 
+			margin-bottom: -3px
+			padding: 0 0
+			margin-top: 0
+			font-size: 14px
+			p 
+				margin: 4px 0 1px
+			a 
+				line-height: 17px
+				display: inline-block
+
+
 
 	/*filter*/
 	.filter-section
@@ -1241,7 +1302,8 @@
 		padding: 0 0 10px 12px
 		font-size: 14px
 		line-height: 21px
-	/*product*/
+
+	/*catalog*/
 	.catalog-grid-4 
 		.catalog-col
 			width: 100%
