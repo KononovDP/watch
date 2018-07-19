@@ -318,7 +318,7 @@
 			padding: 4px 27px 4px 26px
 	.shop-contact 
 		width: 48.5%
-		padding: 0 10px
+		padding: 0 8px
 	.shop-images
 		width: 51.5%
 	.shop-descr
@@ -362,6 +362,9 @@
 			width: 22%
 	.method-descr p
 		margin: 0 0 16px 0
+	.delivery-page 
+		.calc-footer
+			margin-top: 0
 
 	/*filter*/
 	.filter-section 
@@ -647,6 +650,8 @@
 	.review-shop-descr
 		font-size: 12px
 		line-height: 12px
+	.review-list
+		margin: 0
 	.review-item
 		width: 100%
 		padding: 0 10px
@@ -736,14 +741,26 @@
 		max-width: none
 		.delivery-item 
 			.delivery-item-label 
-				width: 171px
+				width: 142px
 			.form-group 
-				width: calc(100% - 171px)
+				width: calc(100% - 142px)
 		p 
 			margin: 9px 0 19px
-
-
-
+	.basket-delivery
+		.delivery-table 
+			.tr-head .td
+				white-space: nowrap
+			.td:first-child 
+				width: 58%
+			.td:nth-child(2) 
+				width: 18%
+			.td:nth-child(3) 
+				width: 24%
+			.td:last-child
+				display: none
+			.radiomark 
+				display: block
+				font: 400 14px/30px "PT Sans Narrow",sans-serif
 
 	.delivery-table 
 		.td:first-child 
@@ -863,6 +880,15 @@
 			width: 26%
 	.method-descr
 		padding: 0 10px
+
+	.delivery-page 
+		.delivery-table 
+			.tr
+				margin-bottom: 15px
+			.tr-header 
+				margin-top: 5px
+				margin-bottom: 11px
+
 
 	/*filter*/
 	.filter-section 
@@ -1242,7 +1268,9 @@
 			a 
 				line-height: 17px
 				display: inline-block
-
+	.delivery-page 
+		.calc-footer 
+			margin-top: -4px
 
 
 	/*filter*/

@@ -1134,12 +1134,12 @@ textarea.form-text
 
 /*REVIEW*/
 .review
-	padding: 10px 12px
+	padding: 10px 20px
 	box-shadow: 0 0 4px 0 rgba(0,0,0,.2)
 .review-header
 	display: flex
 	align-items: center
-	padding: 10px 7px 18px 14px
+	padding: 10px 0 18px 7px
 	border-bottom: 1px solid map-get($colors, grey)
 .review-shop-logo
 	flex: 0 0 168px
@@ -1171,10 +1171,11 @@ textarea.form-text
 .review-list
 	display: flex
 	flex-wrap: wrap
+	margin: 0 -20px
 .review-item
 	position: relative
 	width: 33.33%
-	padding: 0 15px
+	padding: 0 30px
 	&:after
 		position: absolute
 		right: 0
@@ -1648,6 +1649,16 @@ textarea.form-text
 			width: 24%
 	b
 		font-weight: 700
+.delivery-page 
+	.delivery-table
+		.tr
+			margin-bottom: 0
+		.tr-head
+			margin-bottom: 10px
+		.tr-header
+			margin-top: 5px
+	.calc-footer
+		margin-bottom: 0
 
 .calc-footer
 	margin: 22px 0
@@ -1804,6 +1815,7 @@ textarea.form-text
 		height: 100%
 		border-radius: 5px
 .shop-descr	
+	margin-bottom: -10px
 	padding: 0 20px
 	font: 400 16px/21px $default-font
 	p
@@ -2487,7 +2499,7 @@ textarea.form-text
 	padding: 0 34px 20px 34px
 	.info
 		max-width: 690px
-		margin: 0
+		margin: -11px 0 0 0
 		font: 400 14px/18px $default-font
 		color: #000000
 .basket-prod
@@ -2669,6 +2681,10 @@ textarea.form-text
 		border-bottom: 1px solid map-get($colors, grey) 
 		.tr
 			margin-bottom: 0
+		.tr-head
+			margin-bottom: 10px
+		.tr-header
+			margin-bottom: 5px
 		.radiomark
 			font: 400 16px/24px $default-font
 
@@ -2730,6 +2746,14 @@ textarea.form-text
 			font: 700 14px/30px $default-font
 
 /*PRODUCT PAGE*/
+.product-page
+	.slider-wrap
+		margin: -5px -3px -7px
+		.product
+			padding: 22px 20px 17px
+	.single-slider-wrap 
+		margin: -6px -5px
+
 .product-wrapper
 	display: flex
 	padding: 20px 0	0
@@ -3025,7 +3049,7 @@ textarea.form-text
 
 .product-description-descr
 	width: 60%
-	padding: 10px 0
+	padding: 10px 0 0
 
 .twin
 	display: flex
